@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import '../../controller/onboarding_controller.dart';
 import '../../core/constants/color.dart';
 import '../../data/datasource/static/static.dart';
 import '../widgets/onboarding/custom_button.dart';
@@ -116,35 +118,64 @@ import '../widgets/onboarding/dot_controller.dart';
 //     ),
 //   ),
 // )
+
+// class OnBoarding extends StatelessWidget {
+//   const OnBoarding({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//         backgroundColor: Colors.white,
+//         // use saveArea to avoid phone appBar
+//         body: SafeArea(
+//           child: Column(children: const [
+//             Expanded(
+//               flex: 3,
+//               child: IntrinsicHeight(child: CustomSliderOnBoarding()),
+//             ),
+//             // part not slide
+//             // controller of dots && button
+//             // Expanded(
+//             //   flex: 1,
+//             //   child: Column(
+//             //     children: const [
+//             CustomDotControllerOnBoarding(),
+//             // Spacer(flex: 1),
+//             SizedBox(
+//               height: 8.0,
+//             ),
+//             CustomButtonOnBoarding(),
+//             //     ],
+//             //   ),
+//             // ),
+//           ]),
+//         ));
+//   }
+// }
+
 class OnBoarding extends StatelessWidget {
   const OnBoarding({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    // to access controller from any place
+    Get.put(OnBoardingControllerImp());
     return Scaffold(
         backgroundColor: Colors.white,
-        // use saveArea to avoid phone appBar
         body: SafeArea(
-          child: Column(children: const [
-            Expanded(
+          child: Column(children: [
+            const Expanded(
               flex: 3,
-              child: IntrinsicHeight(child: CustomSliderOnBoarding()),
+              child: CustomSliderOnBoarding(),
             ),
-            // part not slide
-            // controller of dots && button
-            // Expanded(
-            //   flex: 1,
-            //   child: Column(
-            //     children: const [
-            CustomDotControllerOnBoarding(),
-            // Spacer(flex: 1),
-            SizedBox(
-              height: 8.0,
-            ),
-            CustomButtonOnBoarding(),
-            //     ],
-            //   ),
-            // ),
+            Column(
+              children: const [
+                CustomDotControllerOnBoarding(),
+                // Spacer(flex: 2),
+                SizedBox(height: 8.0,),
+                CustomButtonOnBoarding()
+              ],
+            )
           ]),
         ));
   }
