@@ -107,7 +107,7 @@ import '../widgets/onboarding/dot_controller.dart';
 /// you can wrap the PageView with an IntrinsicHeight widget to
 /// constrain the height of the PageView to the available height.
 ///
-// Expanded(
+/// Expanded(
 //   child: IntrinsicHeight(
 //     child: PageView(
 //       children: [
@@ -125,22 +125,26 @@ class OnBoarding extends StatelessWidget {
         backgroundColor: Colors.white,
         // use saveArea to avoid phone appBar
         body: SafeArea(
-          child: Column(children: [
-            const Expanded(
+          child: Column(children: const [
+            Expanded(
               flex: 3,
-              child: CustomSliderOnBoarding(),
+              child: IntrinsicHeight(child: CustomSliderOnBoarding()),
             ),
             // part not slide
             // controller of dots && button
-            Expanded(
-                flex: 1,
-                child: Column(
-                  children: const [
-                    CustomDotControllerOnBoarding(),
-                    Spacer(flex: 2),
-                    CustomButtonOnBoarding()
-                  ],
-                ))
+            // Expanded(
+            //   flex: 1,
+            //   child: Column(
+            //     children: const [
+            CustomDotControllerOnBoarding(),
+            // Spacer(flex: 1),
+            SizedBox(
+              height: 8.0,
+            ),
+            CustomButtonOnBoarding(),
+            //     ],
+            //   ),
+            // ),
           ]),
         ));
   }
