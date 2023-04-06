@@ -8,6 +8,7 @@ class CustomButtonOnBoarding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // from bottom
       margin: const EdgeInsets.only(bottom: 30),
       height: 40,
       child: MaterialButton(

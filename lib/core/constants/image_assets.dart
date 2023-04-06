@@ -1,4 +1,5 @@
 class AppImageAsset {
+  // we assign fixed part from root to String
   static const String rootImages = "assets/images";
 
   static const String onBoardingImageOne = "$rootImages/onboardingone.PNG";

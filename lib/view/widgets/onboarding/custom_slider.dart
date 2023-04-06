@@ -3,13 +3,18 @@ import 'package:flutter/material.dart';
 import '../../../core/constants/color.dart';
 import '../../../data/datasource/static/static.dart';
 
+/// PageView => carry three:
+/// title, image, body == desc
 class CustomSliderOnBoarding extends StatelessWidget {
   const CustomSliderOnBoarding({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return PageView.builder(
+      // we use length of our list as itemCount
         itemCount: onBoardingList.length,
+        // how we use itemBuilder
+        // it need index, use it to access data inside our list
         itemBuilder: (context, i) => Column(
               children: [
                 Text(onBoardingList[i].title!,

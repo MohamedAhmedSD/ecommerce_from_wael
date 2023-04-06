@@ -1,10 +1,12 @@
 import '../../../core/constants/image_assets.dart';
 import '../../model/onboarding_model.dart';
 
+// data source may => static, local, remote
+// List<T>
 List<OnBoardingModel> onBoardingList = [
   OnBoardingModel(
       title: "Choose Product",
-      body:
+      body: // we confirm => new line => \n
           "We Have a 100k Product , Choose \n Your Product From  Our \n E-commerce Shop",
       image: AppImageAsset.onBoardingImageOne),
   OnBoardingModel(
