@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../controller/onboarding_controller.dart';
-import '../../core/constants/color.dart';
-import '../../data/datasource/static/static.dart';
+// import '../../core/constants/color.dart';
+// import '../../data/datasource/static/static.dart';
 import '../widgets/onboarding/custom_button.dart';
 import '../widgets/onboarding/custom_slider.dart';
 import '../widgets/onboarding/dot_controller.dart';

@@ -1,3 +1,4 @@
+import 'package:ecommerce_wael/routes.dart';
 import 'package:ecommerce_wael/view/screen/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -25,6 +26,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const OnBoarding(),
+      // if you not call route => login not access
+      routes: routes,
     );
   }
 }

@@ -29,6 +29,7 @@ class OnBoardingControllerImp extends OnBoardingController {
     if (currentPage > onBoardingList.length - 1) {
       // go to next and delete all previeus screens
       Get.offAllNamed(AppRoute.login);
+      // print("last page");
     } else {
       pageController.animateToPage(currentPage,
           duration: const Duration(milliseconds: 900), curve: Curves.easeInOut);
