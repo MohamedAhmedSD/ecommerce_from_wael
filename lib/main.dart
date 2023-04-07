@@ -1,7 +1,10 @@
 import 'package:ecommerce_wael/routes.dart';
-import 'package:ecommerce_wael/view/screen/onboarding.dart';
+// import 'package:ecommerce_wael/view/screen/onboarding.dart';
+import 'package:ecommerce_wael/view/screen/onboarding_new.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'core/constants/color.dart';
 
 // [day 1]
 // upgrade packages => flutter pub upgrade --major-versions
@@ -23,9 +26,22 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        fontFamily: "PlayfairDisplay",
+        textTheme: const TextTheme(
+            // to deal with all app text theme from here
+            // go to place you want call it
+            displayLarge: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+                color: AppColor.black),
+            bodyLarge: TextStyle(
+                height: 2,
+                color: AppColor.grey,
+                fontWeight: FontWeight.bold,
+                fontSize: 17)),
         primarySwatch: Colors.blue,
       ),
-      home: const OnBoarding(),
+      home: const OnBoardingNew(),
       // if you not call route => login not access
       routes: routes,
     );
