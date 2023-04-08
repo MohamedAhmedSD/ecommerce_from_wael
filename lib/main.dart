@@ -1,6 +1,8 @@
+import 'package:ecommerce_wael/core/localization/changed_local.dart';
 import 'package:ecommerce_wael/core/localization/translation.dart';
 import 'package:ecommerce_wael/core/services/services.dart';
 import 'package:ecommerce_wael/routes.dart';
+// import 'package:ecommerce_wael/view/screen/onboarding_new.dart';
 // import 'package:ecommerce_wael/view/screen/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,7 +10,7 @@ import 'package:get/get.dart';
 import 'core/constants/color.dart';
 import 'view/screen/language.dart';
 
-// [day 1]
+// [day 2]
 // upgrade packages => flutter pub upgrade --major-versions
 // its main folder are => core, data, controller, view
 
@@ -19,17 +21,19 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // call its global function
   await initialServices();
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
+  MyApp({Key? key}) : super(key: key);
+// inject our locale
+  final LocaleController localeController = Get.put(LocaleController());
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
       translations: MyTranslation(),
+      // from controller, get lang
+      locale: localeController.language,
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
