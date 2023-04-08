@@ -1,3 +1,5 @@
+import 'package:ecommerce_wael/core/localization/translation.dart';
+import 'package:ecommerce_wael/core/services/services.dart';
 import 'package:ecommerce_wael/routes.dart';
 // import 'package:ecommerce_wael/view/screen/onboarding.dart';
 import 'package:ecommerce_wael/view/screen/onboarding_new.dart';
@@ -12,7 +14,11 @@ import 'core/constants/color.dart';
 
 // we can search about ui inside website our google images
 // then use screen shot to make our images
-void main() {
+void main() async {
+  // add services
+  WidgetsFlutterBinding.ensureInitialized();
+  // call its global function
+  await initialServices();
   runApp(const MyApp());
 }
 
@@ -23,6 +29,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      translations: MyTranslation(),
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
