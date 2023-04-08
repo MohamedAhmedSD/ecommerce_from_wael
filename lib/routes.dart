@@ -17,6 +17,8 @@ Map<String, Widget Function(BuildContext)> routes = {
   AppRoute.forgetPassword: (context) => const ForgetPassword(),
   AppRoute.verfiyCode: (context) => const VerfiyCode(),
   AppRoute.resetPassword: (context) => const ResetPassword(),
+  AppRoute.successResetpassword: (context) => const SuccessResetPassword(),
+  AppRoute.successSignUp: (context) => const SuccessSignUp(),
   // OnBoarding
   AppRoute.onBoarding: (context) => const OnBoarding(),
 };
