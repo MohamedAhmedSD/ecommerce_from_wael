@@ -10,7 +10,7 @@ import 'package:get/get.dart';
 import 'core/constants/color.dart';
 import 'view/screen/language.dart';
 
-// [day 2]
+// [day 2] => loginpage
 // upgrade packages => flutter pub upgrade --major-versions
 // its main folder are => core, data, controller, view
 
