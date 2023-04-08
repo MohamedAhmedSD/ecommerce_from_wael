@@ -6,6 +6,8 @@ import 'view/screen/auth/forgetpassword.dart';
 import 'view/screen/auth/login.dart';
 import 'view/screen/auth/resetpassword.dart';
 import 'view/screen/auth/signup.dart';
+import 'view/screen/auth/success_resetpassword.dart';
+import 'view/screen/auth/success_signup.dart';
 import 'view/screen/auth/verifycode.dart';
 
 // our routes, map take String == routeName and function return Widget

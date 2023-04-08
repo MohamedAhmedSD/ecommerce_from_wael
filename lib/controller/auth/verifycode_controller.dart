@@ -1,15 +1,15 @@
-import 'package:ecommercecourse/core/constant/routes.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+
+import '../../core/constants/route.dart';
 
 abstract class VerifyCodeController extends GetxController {
   checkCode();
   goToResetPassword();
 }
 
-class VerifyCodeControllerImp extends VerifyCodeController {  
-
-  late String verifycode  ; 
+class VerifyCodeControllerImp extends VerifyCodeController {
+  // why we use it?
+  late String verifycode;
 
   @override
   checkCode() {}
@@ -19,10 +19,8 @@ class VerifyCodeControllerImp extends VerifyCodeController {
     Get.offNamed(AppRoute.resetPassword);
   }
 
-  @override
-  void onInit() {  
-    super.onInit();
-  }
-
- 
+  // @override
+  // void onInit() {
+  //   super.onInit();
+  // }
 }

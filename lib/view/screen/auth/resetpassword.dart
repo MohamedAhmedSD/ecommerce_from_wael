@@ -1,18 +1,21 @@
  
-import 'package:ecommercecourse/controller/auth/resetpassword_controller.dart';
-import 'package:ecommercecourse/core/constant/color.dart';
-import 'package:ecommercecourse/view/widget/auth/custombuttonauth.dart';
-import 'package:ecommercecourse/view/widget/auth/customtextbodyauth.dart';
-import 'package:ecommercecourse/view/widget/auth/customtextformauth.dart'; 
-import 'package:ecommercecourse/view/widget/auth/customtexttitleauth.dart'; 
+
 import 'package:flutter/material.dart';
-import 'package:get/get.dart'; 
+import 'package:get/get.dart';
+
+import '../../../controller/auth/resetpassword_controller.dart';
+import '../../../core/constants/color.dart';
+import '../../widgets/auth/custombuttonauth.dart';
+import '../../widgets/auth/customtextbodyauth.dart';
+import '../../widgets/auth/customtextformauth.dart';
+import '../../widgets/auth/customtexttitleauth.dart'; 
 
 class ResetPassword extends StatelessWidget {
   const ResetPassword({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    // inject controller
     ResetPasswordControllerImp controller =
         Get.put(ResetPasswordControllerImp());
     return Scaffold(
@@ -23,7 +26,7 @@ class ResetPassword extends StatelessWidget {
         title: Text('ResetPassword',
             style: Theme.of(context)
                 .textTheme
-                .headline1!
+                .displayLarge!
                 .copyWith(color: AppColor.grey)),
       ),
       body: Container(

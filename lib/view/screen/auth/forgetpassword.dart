@@ -1,17 +1,19 @@
-import 'package:ecommercecourse/controller/auth/forgetpassword_controller.dart'; 
-import 'package:ecommercecourse/core/constant/color.dart';
-import 'package:ecommercecourse/view/widget/auth/custombuttonauth.dart';
-import 'package:ecommercecourse/view/widget/auth/customtextbodyauth.dart';
-import 'package:ecommercecourse/view/widget/auth/customtextformauth.dart';
-import 'package:ecommercecourse/view/widget/auth/customtexttitleauth.dart'; 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../controller/auth/forgetpassword_controller.dart';
+import '../../../core/constants/color.dart';
+import '../../widgets/auth/custombuttonauth.dart';
+import '../../widgets/auth/customtextbodyauth.dart';
+import '../../widgets/auth/customtextformauth.dart';
+import '../../widgets/auth/customtexttitleauth.dart';
 
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    // inject controller
     ForgetPasswordControllerImp controller =
         Get.put(ForgetPasswordControllerImp());
     return Scaffold(
@@ -22,7 +24,7 @@ class ForgetPassword extends StatelessWidget {
         title: Text('Forget Password',
             style: Theme.of(context)
                 .textTheme
-                .headline1!
+                .displayLarge!
                 .copyWith(color: AppColor.grey)),
       ),
       body: Container(
@@ -42,15 +44,16 @@ class ForgetPassword extends StatelessWidget {
             labeltext: "Email",
             // mycontroller: ,
           ),
-          CustomButtomAuth(text: "Check", onPressed: () {
-            controller.goToVerfiyCode() ; 
-          }),
+          // how we check and go to verifycode
+          // by going to its page
+          CustomButtomAuth(
+              text: "Check",
+              onPressed: () {
+                controller.goToVerfiyCode();
+              }),
           const SizedBox(height: 40),
         ]),
       ),
     );
   }
 }
-
-
- 
