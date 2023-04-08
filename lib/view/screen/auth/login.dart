@@ -25,6 +25,7 @@ class Login extends StatelessWidget {
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+        // use listView to carry scrollable list of widgets
         child: ListView(children: [
           const LogoAuth(),
           const SizedBox(height: 20),
@@ -54,8 +55,8 @@ class Login extends StatelessWidget {
           const SizedBox(height: 30),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text("Don't have an account ? "),
+            children: const [
+              Text("Don't have an account ? "),
               InkWell(
                 child: Text("Sign Up",
                     style: TextStyle(

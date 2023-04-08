@@ -21,17 +21,19 @@ class CustonTextFormAuth extends StatelessWidget {
       child: TextFormField(
         controller: mycontroller,
         decoration: InputDecoration(
-            hintText: hinttext,
-            hintStyle: const TextStyle(fontSize: 14),
-            floatingLabelBehavior: FloatingLabelBehavior.always,
-            contentPadding:
-                const EdgeInsets.symmetric(vertical: 5, horizontal: 30),
-            label: Container(
-                margin: const EdgeInsets.symmetric(horizontal: 9),
-                child: Text(labeltext)),
-            suffixIcon: Icon(iconData),
-            border:
-                OutlineInputBorder(borderRadius: BorderRadius.circular(30))),
+          hintText: hinttext,
+          hintStyle: const TextStyle(fontSize: 14),
+          floatingLabelBehavior: FloatingLabelBehavior.always,
+          contentPadding:
+              const EdgeInsets.symmetric(vertical: 5, horizontal: 30),
+          label: Container(
+              margin: const EdgeInsets.symmetric(horizontal: 9),
+              child: Text(labeltext)),
+          suffixIcon: Icon(iconData),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(30),
+          ),
+        ),
       ),
     );
   }
