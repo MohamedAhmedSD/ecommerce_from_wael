@@ -43,13 +43,19 @@ class MyApp extends StatelessWidget {
             // go to place you want call it
             displayLarge: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 20,
+                fontSize: 22,
+                color: AppColor.black),
+            displayMedium: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 26,
                 color: AppColor.black),
             bodyLarge: TextStyle(
                 height: 2,
                 color: AppColor.grey,
                 fontWeight: FontWeight.bold,
-                fontSize: 17)),
+                fontSize: 14),
+            bodyMedium:
+                TextStyle(height: 2, color: AppColor.grey, fontSize: 14)),
         primarySwatch: Colors.blue,
       ),
       home: const Language(),
