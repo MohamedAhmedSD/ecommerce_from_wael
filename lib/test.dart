@@ -31,9 +31,7 @@ class _TestState extends State<Test> {
                   //handle validation or checks here
                 },
                 //runs when every textfield is filled
-                onSubmit: (String verificationCode) {
-                
-                }, // end onSubmit
+                onSubmit: (String verificationCode) {}, // end onSubmit
               ),
             ],
           )),

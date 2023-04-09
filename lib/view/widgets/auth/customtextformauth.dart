@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 
+// make widget as stl not as function == wrong
+// just make stl then cut and paste your widget under return
+
+// bito => shift + alt + e
 class CustonTextFormAuth extends StatelessWidget {
   final String hinttext;
   final String labeltext;
   final IconData iconData;
+  // controller TEC => to use it when input text
+  ///  the mycontroller is used to set a controller for the text field, allowing for easier access to the text that is entered into the text field.
   final TextEditingController? mycontroller;
 
   const CustonTextFormAuth(
@@ -23,6 +29,7 @@ class CustonTextFormAuth extends StatelessWidget {
         decoration: InputDecoration(
           hintText: hinttext,
           hintStyle: const TextStyle(fontSize: 14),
+          // to fix label on certain place
           floatingLabelBehavior: FloatingLabelBehavior.always,
           contentPadding:
               const EdgeInsets.symmetric(vertical: 5, horizontal: 30),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../core/constants/color.dart';
 
+// inkwell contain text when press it we nav to opposite page
 class CustomTextSignUpOrSignIn extends StatelessWidget {
   final String textone;
   final String texttwo;

@@ -16,6 +16,7 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // inject controller of login
+    // we can accsess its function now
     LoginControllerImp controller = Get.put(LoginControllerImp());
     return Scaffold(
       appBar: AppBar(
@@ -61,6 +62,7 @@ class Login extends StatelessWidget {
             },
             child: const Text(
               "Forget Password",
+              // we align it to end
               textAlign: TextAlign.end,
             ),
           ),

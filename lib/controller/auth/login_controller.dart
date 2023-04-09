@@ -26,6 +26,7 @@ class LoginControllerImp extends LoginController {
   }
 
   // start life cycle of TEC
+  /// Initialize TextEditingController objects for email and password
   @override
   void onInit() {
     email = TextEditingController();
