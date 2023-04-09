@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../controller/auth/resetpassword_controller.dart';
-import '../../../core/constants/color.dart';
-import '../../widgets/auth/custombuttonauth.dart';
-import '../../widgets/auth/customtextbodyauth.dart';
-import '../../widgets/auth/customtextformauth.dart';
-import '../../widgets/auth/customtexttitleauth.dart';
+import '../../../../controller/auth/resetpassword_controller.dart';
+import '../../../../core/constants/color.dart';
+import '../../../widgets/auth/custombuttonauth.dart';
+import '../../../widgets/auth/customtextbodyauth.dart';
+import '../../../widgets/auth/customtextformauth.dart';
+import '../../../widgets/auth/customtexttitleauth.dart';
 
 // after verify code done
 // we send him to reset its pw
@@ -52,7 +52,11 @@ class ResetPassword extends StatelessWidget {
             // mycontroller: ,
           ),
           // after success nav to success page
-          CustomButtomAuth(text: "save", onPressed: () {}),
+          CustomButtomAuth(
+              text: "save",
+              onPressed: () {
+                controller.goToSuccessResetPassword();
+              }),
           const SizedBox(height: 40),
         ]),
       ),

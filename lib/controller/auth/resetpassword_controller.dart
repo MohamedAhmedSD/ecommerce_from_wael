@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 
 import '../../core/constants/route.dart';
@@ -9,6 +10,9 @@ abstract class ResetPasswordController extends GetxController {
 }
 
 class ResetPasswordControllerImp extends ResetPasswordController { 
+  //
+    GlobalKey<FormState> formstate = GlobalKey<FormState>();
+
   // TEC
   // we need pw repeat for 2 times
   late TextEditingController password; 
@@ -20,8 +24,13 @@ class ResetPasswordControllerImp extends ResetPasswordController {
   // nav to success page
   @override
   goToSuccessResetPassword() {
-    Get.offNamed(AppRoute.verfiyCode);
-  }
+ if (formstate.currentState!.validate()) {
+      Get.offNamed(AppRoute.successResetpassword);
+    } else {
+      if (kDebugMode) {
+        print("Not Valid");
+      }
+    }  }
 
   // life cycle start & end
   @override

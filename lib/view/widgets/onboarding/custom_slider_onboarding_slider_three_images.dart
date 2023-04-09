@@ -26,6 +26,9 @@ class CustomSliderOnBoardingTwo extends GetView<OnBoardingControllerImp> {
                   // width: 200,
                   // height: 230,
                   // fit: BoxFit.fill,
+                  // use grtx to make same size of image
+                  width: Get.width / 1.3,
+                  fit: BoxFit.fill,
                 ),
                 // const SizedBox(height: 80),
                 Text(

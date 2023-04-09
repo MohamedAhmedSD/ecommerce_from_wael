@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 
 import '../../core/constants/route.dart';
@@ -9,6 +10,9 @@ abstract class SignUpController extends GetxController {
 }
 
 class SignUpControllerImp extends SignUpController {
+  //
+    GlobalKey<FormState> formstate = GlobalKey<FormState>();
+
   // TEC
   late TextEditingController username;
   late TextEditingController email;
@@ -17,7 +21,16 @@ class SignUpControllerImp extends SignUpController {
 
   // empty
   @override
-  signUp() {}
+  signUp() {
+    if (formstate.currentState!.validate()) {
+      Get.offNamed(AppRoute.verfiyCodeSignUp);
+      Get.delete<SignUpControllerImp>();
+    } else {
+      if (kDebugMode) {
+        print("Not Valid");
+      }
+    }
+  }
 
   // nav
   @override

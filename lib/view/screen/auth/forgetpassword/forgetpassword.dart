@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../controller/auth/forgetpassword_controller.dart';
-import '../../../core/constants/color.dart';
-import '../../widgets/auth/custombuttonauth.dart';
-import '../../widgets/auth/customtextbodyauth.dart';
-import '../../widgets/auth/customtextformauth.dart';
-import '../../widgets/auth/customtexttitleauth.dart';
+import '../../../../controller/auth/forgetpassword_controller.dart';
+import '../../../../core/constants/color.dart';
+import '../../../widgets/auth/custombuttonauth.dart';
+import '../../../widgets/auth/customtextbodyauth.dart';
+import '../../../widgets/auth/customtextformauth.dart';
+import '../../../widgets/auth/customtexttitleauth.dart';
+
 
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({Key? key}) : super(key: key);

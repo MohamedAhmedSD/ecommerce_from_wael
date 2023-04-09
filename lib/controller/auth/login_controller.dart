@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+// import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 
 import '../../core/constants/route.dart';
@@ -10,6 +11,9 @@ abstract class LoginController extends GetxController {
 }
 
 class LoginControllerImp extends LoginController {
+  //
+  GlobalKey<FormState> formstate = GlobalKey<FormState>();
+
   // make our TextEditingController
   // that we need to full TFF
   late TextEditingController email;
@@ -17,7 +21,18 @@ class LoginControllerImp extends LoginController {
 
   // empty
   @override
-  login() {}
+  login() {
+    // ar formdata = formstate.currentState;
+    // if (formdata!.validate()) {
+    //   if (kDebugMode) {
+    //     print("Valid");
+    //   }
+    // } else {
+    //   if (kDebugMode) {
+    //     print("Not Valid");
+    //   }
+    // }
+  }
 
   // nav
   @override

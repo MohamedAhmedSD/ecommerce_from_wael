@@ -1,20 +1,20 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 
-import '../../../controller/auth/verifycode_controller.dart';
+import '../../../controller/auth/verfiycodesignup_controller.dart';
 import '../../../core/constants/color.dart';
 import '../../widgets/auth/customtextbodyauth.dart';
 import '../../widgets/auth/customtexttitleauth.dart';
 
-// we use package => flutter_otp_text_field
-class VerfiyCode extends StatelessWidget {
-  const VerfiyCode({Key? key}) : super(key: key);
+class VerfiyCodeSignUp extends StatelessWidget {
+  const VerfiyCodeSignUp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // inject controller
-    VerifyCodeControllerImp controller = Get.put(VerifyCodeControllerImp());
+    VerifyCodeSignUpControllerImp controller =
+        Get.put(VerifyCodeSignUpControllerImp());
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -35,7 +35,6 @@ class VerfiyCode extends StatelessWidget {
           const CustomTextBodyAuth(
               text: "Please Enter The Digit Code Sent To wael@gmail.com"),
           const SizedBox(height: 15),
-          // otp ::::::::::::
           OtpTextField(
             fieldWidth: 50.0,
             borderRadius: BorderRadius.circular(20),
@@ -49,9 +48,8 @@ class VerfiyCode extends StatelessWidget {
             },
             //runs when every textfield is filled
             onSubmit: (String verificationCode) {
-              controller.goToResetPassword();
+              controller.goToSuccessSignUp();
             }, // end onSubmit
-            // it have show alert proberty also
           ),
           const SizedBox(height: 40),
         ]),

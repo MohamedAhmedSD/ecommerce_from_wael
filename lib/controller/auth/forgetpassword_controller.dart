@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 // bito => workplace => https://alpha.bito.co/auth/login?red=ws&TgVDJu0YJT4YlTqJA6izLGwGbc7OispF5_nazrADdeQ=
 import '../../core/constants/route.dart';
@@ -10,6 +11,9 @@ abstract class ForgetPasswordController extends GetxController {
 }
 
 class ForgetPasswordControllerImp extends ForgetPasswordController {
+  //
+  GlobalKey<FormState> formstate = GlobalKey<FormState>();
+
   // TEC, when forget we need use your email to send a message
   late TextEditingController email;
 
@@ -24,7 +28,13 @@ class ForgetPasswordControllerImp extends ForgetPasswordController {
 
   @override
   goToVerfiyCode() {
-    Get.offNamed(AppRoute.verfiyCode);
+    if (formstate.currentState!.validate()) {
+      Get.offNamed(AppRoute.verfiyCode);
+    } else {
+      if (kDebugMode) {
+        print("Not Valid");
+      }
+    }
   }
 
   // start

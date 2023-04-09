@@ -7,7 +7,6 @@ import 'package:ecommerce_wael/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'core/constants/color.dart';
 import 'view/screen/language.dart';
 
 // [day 2] => loginpage
@@ -34,30 +33,32 @@ class MyApp extends StatelessWidget {
       translations: MyTranslation(),
       // from controller, get lang
       locale: localeController.language,
+      theme: localeController.appTheme,
+
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        fontFamily: "PlayfairDisplay",
-        textTheme: const TextTheme(
-            // to deal with all app text theme from here
-            // go to place you want call it
-            displayLarge: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 22,
-                color: AppColor.black),
-            displayMedium: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 26,
-                color: AppColor.black),
-            bodyLarge: TextStyle(
-                height: 2,
-                color: AppColor.grey,
-                fontWeight: FontWeight.bold,
-                fontSize: 14),
-            bodyMedium:
-                TextStyle(height: 2, color: AppColor.grey, fontSize: 14)),
-        primarySwatch: Colors.blue,
-      ),
+      // theme: ThemeData(
+      //   fontFamily: "PlayfairDisplay",
+      //   textTheme: const TextTheme(
+      //       // to deal with all app text theme from here
+      //       // go to place you want call it
+      //       displayLarge: TextStyle(
+      //           fontWeight: FontWeight.bold,
+      //           fontSize: 22,
+      //           color: AppColor.black),
+      //       displayMedium: TextStyle(
+      //           fontWeight: FontWeight.bold,
+      //           fontSize: 26,
+      //           color: AppColor.black),
+      //       bodyLarge: TextStyle(
+      //           height: 2,
+      //           color: AppColor.grey,
+      //           fontWeight: FontWeight.bold,
+      //           fontSize: 14),
+      //       bodyMedium:
+      //           TextStyle(height: 2, color: AppColor.grey, fontSize: 14)),
+      //   primarySwatch: Colors.blue,
+      // ),
       home: const Language(),
       // if you not call route => login not access
       routes: routes,
