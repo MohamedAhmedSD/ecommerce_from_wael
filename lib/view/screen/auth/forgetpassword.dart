@@ -49,6 +49,10 @@ class ForgetPassword extends StatelessWidget {
           CustomButtomAuth(
               text: "Check",
               onPressed: () {
+                // by asking backend if user has email on it
+                // if found it send hem to verify code
+                // it recive code on its email or phone
+
                 controller.goToVerfiyCode();
               }),
           const SizedBox(height: 40),

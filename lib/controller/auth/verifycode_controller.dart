@@ -9,11 +9,13 @@ abstract class VerifyCodeController extends GetxController {
 
 class VerifyCodeControllerImp extends VerifyCodeController {
   // why we use it?
+  // we make empty string, when we need it 
   late String verifycode;
 
   @override
   checkCode() {}
 
+  // after success go to reset pw
   @override
   goToResetPassword() {
     Get.offNamed(AppRoute.resetPassword);

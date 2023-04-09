@@ -1,5 +1,3 @@
- 
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -8,8 +6,10 @@ import '../../../core/constants/color.dart';
 import '../../widgets/auth/custombuttonauth.dart';
 import '../../widgets/auth/customtextbodyauth.dart';
 import '../../widgets/auth/customtextformauth.dart';
-import '../../widgets/auth/customtexttitleauth.dart'; 
+import '../../widgets/auth/customtexttitleauth.dart';
 
+// after verify code done
+// we send him to reset its pw
 class ResetPassword extends StatelessWidget {
   const ResetPassword({Key? key}) : super(key: key);
 
@@ -35,23 +35,23 @@ class ResetPassword extends StatelessWidget {
           const SizedBox(height: 20),
           const CustomTextTitleAuth(text: "New Password"),
           const SizedBox(height: 10),
-          const CustomTextBodyAuth(
-              text:
-                  "Please Enter new Password"),
+          const CustomTextBodyAuth(text: "Please Enter new Password"),
           const SizedBox(height: 15),
-            CustonTextFormAuth(
+          CustonTextFormAuth(
             mycontroller: controller.password,
             hinttext: "Enter Your Password",
             iconData: Icons.lock_outline,
             labeltext: "Password",
             // mycontroller: ,
-          ),   CustonTextFormAuth(
+          ),
+          CustonTextFormAuth(
             mycontroller: controller.password,
             hinttext: "Re Enter Your Password",
             iconData: Icons.lock_outline,
             labeltext: "Password",
             // mycontroller: ,
           ),
+          // after success nav to success page
           CustomButtomAuth(text: "save", onPressed: () {}),
           const SizedBox(height: 40),
         ]),

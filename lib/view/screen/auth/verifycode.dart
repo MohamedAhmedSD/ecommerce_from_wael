@@ -7,6 +7,7 @@ import '../../../core/constants/color.dart';
 import '../../widgets/auth/customtextbodyauth.dart';
 import '../../widgets/auth/customtexttitleauth.dart';
 
+// we use package => flutter_otp_text_field
 class VerfiyCode extends StatelessWidget {
   const VerfiyCode({Key? key}) : super(key: key);
 
@@ -34,7 +35,7 @@ class VerfiyCode extends StatelessWidget {
           const CustomTextBodyAuth(
               text: "Please Enter The Digit Code Sent To wael@gmail.com"),
           const SizedBox(height: 15),
-          // otp
+          // otp ::::::::::::
           OtpTextField(
             fieldWidth: 50.0,
             borderRadius: BorderRadius.circular(20),
@@ -50,6 +51,7 @@ class VerfiyCode extends StatelessWidget {
             onSubmit: (String verificationCode) {
               controller.goToResetPassword();
             }, // end onSubmit
+            // it have show alert proberty also
           ),
           const SizedBox(height: 40),
         ]),
