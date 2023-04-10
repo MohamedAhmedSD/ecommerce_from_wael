@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 // import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 
@@ -11,7 +12,7 @@ abstract class LoginController extends GetxController {
 }
 
 class LoginControllerImp extends LoginController {
-  //
+  // we use form to deal with our tff
   GlobalKey<FormState> formstate = GlobalKey<FormState>();
 
   // make our TextEditingController
@@ -22,22 +23,27 @@ class LoginControllerImp extends LoginController {
   // empty
   @override
   login() {
-    // ar formdata = formstate.currentState;
-    // if (formdata!.validate()) {
-    //   if (kDebugMode) {
-    //     print("Valid");
-    //   }
-    // } else {
-    //   if (kDebugMode) {
-    //     print("Not Valid");
-    //   }
-    // }
+    // when use login function
+    // we need check is our field vaild according our validators our not
+    var formdata = formstate.currentState;
+    if (formdata!.validate()) {
+      if (kDebugMode) {
+        print("Valid");
+      }
+    } else {
+      if (kDebugMode) {
+        print("Not Valid");
+      }
+    }
   }
 
   // nav
   @override
   goToSignUp() {
-    Get.toNamed(AppRoute.signUp);
+    // toNmed , may cause duplicate Globalkey
+    // to avoid them use offNamed
+    // Get.toNamed(AppRoute.signUp);
+    Get.offNamed(AppRoute.signUp);
   }
 
   // start life cycle of TEC

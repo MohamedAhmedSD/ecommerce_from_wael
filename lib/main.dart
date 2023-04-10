@@ -7,6 +7,7 @@ import 'package:ecommerce_wael/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'bindings.dart';
 import 'view/screen/language.dart';
 
 // [day 2] => loginpage
@@ -62,6 +63,7 @@ class MyApp extends StatelessWidget {
       home: const Language(),
       // if you not call route => login not access
       routes: routes,
+      initialBinding: MyBinding(),
     );
   }
 }

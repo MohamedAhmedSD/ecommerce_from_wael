@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../../../../controller/auth/resetpassword_controller.dart';
 import '../../../../core/constants/color.dart';
+import '../../../../core/functions/validinput.dart';
 import '../../../widgets/auth/custombuttonauth.dart';
 import '../../../widgets/auth/customtextbodyauth.dart';
 import '../../../widgets/auth/customtextformauth.dart';
@@ -15,7 +16,6 @@ class ResetPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // inject controller
     ResetPasswordControllerImp controller =
         Get.put(ResetPasswordControllerImp());
     return Scaffold(
@@ -31,34 +31,45 @@ class ResetPassword extends StatelessWidget {
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
-        child: ListView(children: [
-          const SizedBox(height: 20),
-          const CustomTextTitleAuth(text: "New Password"),
-          const SizedBox(height: 10),
-          const CustomTextBodyAuth(text: "Please Enter new Password"),
-          const SizedBox(height: 15),
-          CustonTextFormAuth(
-            mycontroller: controller.password,
-            hinttext: "Enter Your Password",
-            iconData: Icons.lock_outline,
-            labeltext: "Password",
-            // mycontroller: ,
-          ),
-          CustonTextFormAuth(
-            mycontroller: controller.password,
-            hinttext: "Re Enter Your Password",
-            iconData: Icons.lock_outline,
-            labeltext: "Password",
-            // mycontroller: ,
-          ),
-          // after success nav to success page
-          CustomButtomAuth(
-              text: "save",
-              onPressed: () {
-                controller.goToSuccessResetPassword();
-              }),
-          const SizedBox(height: 40),
-        ]),
+        child: Form(
+          key: controller.formstate,
+          child: ListView(children: [
+            const SizedBox(height: 20),
+            CustomTextTitleAuth(text: "35".tr),
+            const SizedBox(height: 10),
+            CustomTextBodyAuth(text: "35".tr),
+            const SizedBox(height: 15),
+            CustomTextFormAuth(
+              isNumber: false,
+              valid: (val) {
+                return validInput(val!, 3, 40, "password");
+              },
+              mycontroller: controller.password,
+              hinttext: "13".tr,
+              iconData: Icons.lock_outline,
+              labeltext: "19".tr,
+              // mycontroller: ,
+            ),
+            CustomTextFormAuth(
+              isNumber: false,
+
+              valid: (val) {
+                return validInput(val!, 3, 40, "password");
+              },
+              mycontroller: controller.password,
+              hinttext: "Re ${"13".tr}",
+              iconData: Icons.lock_outline,
+              labeltext: "19".tr,
+              // mycontroller: ,
+            ),
+            CustomButtomAuth(
+                text: "33".tr,
+                onPressed: () {
+                  controller.goToSuccessResetPassword();
+                }),
+            const SizedBox(height: 40),
+          ]),
+        ),
       ),
     );
   }

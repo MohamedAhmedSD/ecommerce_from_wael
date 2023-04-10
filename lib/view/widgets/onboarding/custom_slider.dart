@@ -73,8 +73,11 @@ class CustomSliderOnBoarding extends GetView<OnBoardingControllerImp> {
                 const SizedBox(height: 80),
                 Image.asset(
                   onBoardingList[i].image!,
-                  width: 200,
-                  height: 230,
+                  // width: 200,
+                  // height: 230,
+                  // fit: BoxFit.fill,
+                  // use grtx to make same size of image
+                  height: Get.width / 1.3,
                   fit: BoxFit.fill,
                 ),
                 const SizedBox(height: 80),

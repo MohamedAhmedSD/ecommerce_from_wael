@@ -27,14 +27,22 @@ class Language extends GetView<LocaleController> {
             onPressed: () {
               // GitView controller == controller
               controller.changeLang("ar");
-              Get.offNamed(AppRoute.onBoarding);
+              // no back
+              // Get.offNamed(AppRoute.onBoarding);
+              // or //
+              // if we nedd make user able back to language
+              // to change it from here er use
+              Get.toNamed(AppRoute.onBoarding);
             },
           ),
           CustomButtonLang(
             textbutton: 'En',
             onPressed: () {
               controller.changeLang("en");
+              // no back
               Get.offNamed(AppRoute.onBoarding);
+              // or //
+              Get.toNamed(AppRoute.onBoarding);
             },
           ),
         ]),

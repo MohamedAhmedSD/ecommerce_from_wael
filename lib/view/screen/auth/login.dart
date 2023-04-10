@@ -1,3 +1,4 @@
+import 'package:ecommerce_wael/core/functions/validinput.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,6 +14,9 @@ import '../../widgets/auth/textsignup.dart';
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
 
+  // we need wrap them y=under form
+  // make its key on our login controller
+
   @override
   Widget build(BuildContext context) {
     // inject controller of login
@@ -23,7 +27,7 @@ class Login extends StatelessWidget {
         centerTitle: true,
         backgroundColor: AppColor.backgroundcolor,
         elevation: 0.0,
-        title: Text('Sign In',
+        title: Text('9'.tr, //'Sign In'
             style: Theme.of(context)
                 .textTheme
                 .displayLarge!
@@ -31,53 +35,74 @@ class Login extends StatelessWidget {
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
-        child: ListView(children: [
-          const LogoAuth(),
-          const SizedBox(height: 20),
-          const CustomTextTitleAuth(text: "Welcome Back"),
-          const SizedBox(height: 10),
-          const CustomTextBodyAuth(
-              text:
-                  "Sign In With Your Email And Password OR Continue With Social Media"),
-          const SizedBox(height: 15),
-          CustonTextFormAuth(
-            // by controller I can listen to what written inside field
-            mycontroller: controller.email,
-            hinttext: "Enter Your Email",
-            iconData: Icons.email_outlined,
-            labeltext: "Email",
-            // mycontroller: ,
-          ),
-          CustonTextFormAuth(
-            mycontroller: controller.password,
-            hinttext: "Enter Your Password",
-            iconData: Icons.lock_outline,
-            labeltext: "Password",
-            // mycontroller: ,
-          ),
-          InkWell(
-            onTap: () {
-              // nav by call method that nav => goToForgetPassword
-              controller.goToForgetPassword();
-            },
-            child: const Text(
-              "Forget Password",
-              // we align it to end
-              textAlign: TextAlign.end,
+        child: Form(
+          // we bring our key from controller
+          key: controller.formstate,
+          child: ListView(children: [
+            const LogoAuth(),
+            const SizedBox(height: 20),
+            // when use tr == translation ensure you delete const from your widget
+            CustomTextTitleAuth(text: "10".tr), // "Welcome Back"
+            const SizedBox(height: 10),
+            CustomTextBodyAuth(
+                text: "11"
+                    .tr), // "Sign In With Your Email And Password OR Continue With Social Media"
+            const SizedBox(height: 15),
+            CustomTextFormAuth(
+              // use our validator
+              valid: (val) {
+                return validInput(val!, 5, 100, "email");
+              },
+              // kb
+              isNumber: false,
+              // by controller I can listen to what written inside field
+              mycontroller: controller.email,
+              hinttext: "12".tr, // "Enter Your Email"
+              iconData: Icons.email_outlined,
+              labeltext: "18".tr, // "Email"
+              // mycontroller: ,
             ),
-          ),
-          CustomButtomAuth(text: "Sign In", onPressed: () {}),
-          const SizedBox(height: 40),
-          // nav to opposite
-          CustomTextSignUpOrSignIn(
-            textone: "Don't have an account ? ",
-            texttwo: "SignUp",
-            onTap: () {
-              // nav by call method that nav to => goToSignUp
-              controller.goToSignUp();
-            },
-          )
-        ]),
+            CustomTextFormAuth(
+              valid: (val) {
+                return validInput(val!, 5, 30, "password");
+              },
+              isNumber: false,
+              mycontroller: controller.password,
+              hinttext: "13".tr, // "Enter Your Password"
+
+              iconData: Icons.lock_outline,
+              labeltext: "19".tr, // "Password"
+              // mycontroller: ,
+            ),
+
+            InkWell(
+              onTap: () {
+                // nav by call method that nav => goToForgetPassword
+                controller.goToForgetPassword();
+              },
+              child: Text(
+                "14".tr, // "Forget Password"
+                // we align it to end
+                textAlign: TextAlign.end,
+              ),
+            ),
+            CustomButtomAuth(
+                text: "15".tr, // "Sign In"
+                onPressed: () {
+                  controller.login();
+                }),
+            const SizedBox(height: 40),
+            // nav to opposite
+            CustomTextSignUpOrSignIn(
+              textone: "16".tr, // "Don't have an account ? "
+              texttwo: "17".tr, // "SignUp"
+              onTap: () {
+                // nav by call method that nav to => goToSignUp
+                controller.goToSignUp();
+              },
+            )
+          ]),
+        ),
       ),
     );
   }
