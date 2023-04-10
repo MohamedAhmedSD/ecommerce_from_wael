@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'bindings.dart';
-import 'view/screen/language.dart';
+import 'view/screen/onboarding_new.dart';
 
 // [day 2] => loginpage
 // upgrade packages => flutter pub upgrade --major-versions
@@ -60,7 +60,7 @@ class MyApp extends StatelessWidget {
       //           TextStyle(height: 2, color: AppColor.grey, fontSize: 14)),
       //   primarySwatch: Colors.blue,
       // ),
-      home: const Language(),
+      home: const OnBoardingNew(),
       // if you not call route => login not access
       routes: routes,
       initialBinding: MyBinding(),

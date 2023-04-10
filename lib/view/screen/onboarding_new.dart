@@ -17,34 +17,20 @@ class OnBoardingNew extends StatelessWidget {
     // to access controller from any place
     Get.put(OnBoardingControllerImp());
     return Scaffold(
-        // backgroundColor: Colors.white,
-        backgroundColor: AppColor.backgroundcolor,
+        backgroundColor: Colors.white,
         body: SafeArea(
           child: Column(children: [
             const Expanded(
-              flex: 4,
+              flex: 3,
               child: CustomSliderOnBoardingTwo(),
             ),
-            // me
-            // Column(
-            //   children: const [
-            //     CustomDotControllerOnBoarding(),
-            //     // Spacer(flex: 2),
-            //     SizedBox(
-            //       height: 8.0,
-            //     ),
-            //     CustomButtonOnBoarding()
-            //   ],
-            // ),
-            Expanded(
-              flex: 1,
-              child: Column(
-                children: const [
-                  CustomDotControllerOnBoarding(),
-                  Spacer(flex: 2),
-                  CustomButtonOnBoarding()
-                ],
-              ),
+            Column(
+              children: const [
+                CustomDotControllerOnBoarding(),
+                // Spacer(flex: 2),
+                SizedBox(height: 8.0,),
+                CustomButtonOnBoarding()
+              ],
             )
           ]),
         ));

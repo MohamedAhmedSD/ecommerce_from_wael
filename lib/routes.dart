@@ -1,4 +1,5 @@
 import 'package:ecommerce_wael/view/screen/onboarding.dart';
+import 'package:ecommerce_wael/view/screen/onboarding_new.dart';
 import 'package:flutter/material.dart';
 
 import 'core/constants/route.dart';
@@ -25,5 +26,6 @@ Map<String, Widget Function(BuildContext)> routes = {
   AppRoute.successSignUp: (context) => const SuccessSignUp(),
   // OnBoarding
   AppRoute.onBoarding: (context) => const OnBoarding(),
+  AppRoute.onBoardingnew: (context) => const OnBoardingNew(),
   AppRoute.verfiyCodeSignUp: (context) => const VerfiyCodeSignUp(),
 };

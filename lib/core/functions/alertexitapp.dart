@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../constants/color.dart';
-
+// function to solve back problem
 Future<bool> alertExitApp() {
   Get.defaultDialog(
       title: "تنبيه",
