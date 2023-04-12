@@ -20,6 +20,16 @@ class LoginControllerImp extends LoginController {
   late TextEditingController email;
   late TextEditingController password;
 
+  // we make bool to deal with pw hidden or not
+  bool isshowpassword = true;
+
+  showPassword() {
+    // if true change to false , and vers versa
+    isshowpassword = isshowpassword == true ? false : true;
+    // don't forget use update => UI update
+    update();
+  }
+
   // empty
   @override
   login() {

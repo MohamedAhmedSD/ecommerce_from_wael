@@ -34,10 +34,11 @@ class Login extends StatelessWidget {
                 .displayLarge!
                 .copyWith(color: AppColor.grey)),
       ),
-      // we wrap it under dialog widget 
+      // we wrap it under dialog widget
       // to tell user when press back is he sure then exit
 
-      body: WillPopScope( // it built0in widget
+      body: WillPopScope(
+        // it built0in widget
         onWillPop: alertExitApp, // take function we make it
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
@@ -68,19 +69,29 @@ class Login extends StatelessWidget {
                 labeltext: "18".tr, // "Email"
                 // mycontroller: ,
               ),
-              CustomTextFormAuth(
-                valid: (val) {
-                  return validInput(val!, 5, 30, "password");
-                },
-                isNumber: false,
-                mycontroller: controller.password,
-                hinttext: "13".tr, // "Enter Your Password"
-      
-                iconData: Icons.lock_outline,
-                labeltext: "19".tr, // "Password"
-                // mycontroller: ,
+              GetBuilder<LoginControllerImp>(
+                builder: (controller) => CustomTextFormAuth(
+                  // we use both
+                  // obscureText && onTapIcon
+                  obscureText: controller.isshowpassword,
+                  onTapIcon: () {
+                    controller.showPassword();
+                    // but widget not refresh if not under
+                    // GetBuilder..
+                  },
+                  valid: (val) {
+                    return validInput(val!, 5, 30, "password");
+                  },
+                  isNumber: false,
+                  mycontroller: controller.password,
+                  hinttext: "13".tr, // "Enter Your Password"
+
+                  iconData: Icons.lock_outline,
+                  labeltext: "19".tr, // "Password"
+                  // mycontroller: ,
+                ),
               ),
-      
+
               InkWell(
                 onTap: () {
                   // nav by call method that nav => goToForgetPassword

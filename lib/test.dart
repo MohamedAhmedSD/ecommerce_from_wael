@@ -1,5 +1,8 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+
+import 'core/functions/checkinternet.dart';
 
 class Test extends StatefulWidget {
   const Test({Key? key}) : super(key: key);
@@ -9,6 +12,22 @@ class Test extends StatefulWidget {
 }
 
 class _TestState extends State<Test> {
+  // test internet connection
+  var res;
+  initialdata() async {
+    // res = await checkInternet();
+    res = await hasNetwork2();
+  }
+
+  @override
+  void initState() {
+    initialdata();
+    if (kDebugMode) {
+      print(res);
+    }
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

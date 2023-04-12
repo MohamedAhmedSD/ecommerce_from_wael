@@ -1,3 +1,4 @@
+import 'package:ecommerce_wael/test.dart';
 import 'package:ecommerce_wael/view/screen/onboarding.dart';
 import 'package:ecommerce_wael/view/screen/onboarding_new.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,9 @@ import 'view/screen/auth/verifycode_signup.dart';
 // our routes, map take String == routeName and function return Widget
 // don't forget add route to your main under home:
 Map<String, Widget Function(BuildContext)> routes = {
+  // test, internet connection
+    AppRoute.test: (context) => const Test(),
+
   // Auth
   AppRoute.login: (context) => const Login(),
   AppRoute.signUp: (context) => const SignUp(),

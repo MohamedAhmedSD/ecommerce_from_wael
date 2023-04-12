@@ -2,13 +2,13 @@ import 'package:ecommerce_wael/core/localization/changed_local.dart';
 import 'package:ecommerce_wael/core/localization/translation.dart';
 import 'package:ecommerce_wael/core/services/services.dart';
 import 'package:ecommerce_wael/routes.dart';
+import 'package:ecommerce_wael/test.dart';
 // import 'package:ecommerce_wael/view/screen/onboarding_new.dart';
 // import 'package:ecommerce_wael/view/screen/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'bindings.dart';
-import 'view/screen/onboarding_new.dart';
 
 // [day 2] => loginpage
 // upgrade packages => flutter pub upgrade --major-versions
@@ -60,7 +60,7 @@ class MyApp extends StatelessWidget {
       //           TextStyle(height: 2, color: AppColor.grey, fontSize: 14)),
       //   primarySwatch: Colors.blue,
       // ),
-      home: const OnBoardingNew(),
+      home: const Test(),
       // if you not call route => login not access
       routes: routes,
       initialBinding: MyBinding(),

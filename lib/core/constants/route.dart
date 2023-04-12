@@ -1,6 +1,7 @@
 // here we add route names
 // we put route file near to main => rapid
 class AppRoute {
+  static const String test = "/test";
   static const String login = "/login";
   static const String onBoarding = "/onboarding";
   static const String onBoardingnew = "/onboardingnew";

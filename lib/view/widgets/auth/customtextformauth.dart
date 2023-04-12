@@ -58,6 +58,8 @@ class CustomTextFormAuth extends StatelessWidget {
   // keyboard type if I wana only 2 types,
   // if we deal with more use String type
   final bool isNumber;
+  // we make its obscure as non-nullable
+  // we use it only with password
   final bool? obscureText;
   final void Function()? onTapIcon;
 
@@ -85,6 +87,8 @@ class CustomTextFormAuth extends StatelessWidget {
             : TextInputType.text,
         validator: valid,
         controller: mycontroller,
+
+        /// if it null or false make it false : or it true
         obscureText: obscureText == null || obscureText == false ? false : true,
         decoration: InputDecoration(
             hintText: hinttext,
@@ -95,6 +99,9 @@ class CustomTextFormAuth extends StatelessWidget {
             label: Container(
                 margin: const EdgeInsets.symmetric(horizontal: 9),
                 child: Text(labeltext)),
+            // icon that not required
+            // ontapIcon is funsion under inkwell
+            // to use it woth pw hiden
             suffixIcon: InkWell(onTap: onTapIcon, child: Icon(iconData)),
             border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(30))),
