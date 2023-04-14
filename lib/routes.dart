@@ -13,23 +13,31 @@ import 'view/screen/auth/signup.dart';
 import 'view/screen/auth/success_signup.dart';
 import 'view/screen/auth/verifycode_signup.dart';
 
+//! our routes, map take String == Widget form from =>
+//? routeName and function return Widget
+//* (context) => const Login(),
 
-// our routes, map take String == routeName and function return Widget
-// don't forget add route to your main under home:
+//! don't forget add routes to your main file under home:,
+// to use them as routs for your application
 Map<String, Widget Function(BuildContext)> routes = {
+  // GetPage(name: "/", page: () => const Language() , middlewares: [
+  //   MyMiddleWare()
+  // ]),
+  // GetPage(name: "/", page: () => TestView()),
   // test, internet connection
-    AppRoute.test: (context) => const Test(),
+  AppRoute.test: (context) => const Test(),
 
   // Auth
   AppRoute.login: (context) => const Login(),
   AppRoute.signUp: (context) => const SignUp(),
   AppRoute.forgetPassword: (context) => const ForgetPassword(),
   AppRoute.verfiyCode: (context) => const VerfiyCode(),
-  AppRoute.resetPassword: (context) => const ResetPassword(), 
+  AppRoute.resetPassword: (context) => const ResetPassword(),
   AppRoute.successResetpassword: (context) => const SuccessResetPassword(),
   AppRoute.successSignUp: (context) => const SuccessSignUp(),
+  AppRoute.verfiyCodeSignUp: (context) => const VerfiyCodeSignUp(),
+
   // OnBoarding
   AppRoute.onBoarding: (context) => const OnBoarding(),
   AppRoute.onBoardingnew: (context) => const OnBoardingNew(),
-  AppRoute.verfiyCodeSignUp: (context) => const VerfiyCodeSignUp(),
 };

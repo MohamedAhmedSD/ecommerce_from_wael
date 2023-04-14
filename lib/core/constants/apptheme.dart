@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'color.dart';
 
-// if first page not take theme we need
-// change its certain place manually
+//? if first page not take theme we need
+//* change its certain place (that not response to theme change) manually
+//! [1] English
 ThemeData themeEnglish = ThemeData(
   fontFamily: "PlayfairDisplay",
   textTheme: const TextTheme(
@@ -20,6 +21,7 @@ ThemeData themeEnglish = ThemeData(
   primarySwatch: Colors.blue,
 );
 
+//! [2] Arabic
 ThemeData themeArabic = ThemeData(
   fontFamily: "Cairo",
   textTheme: const TextTheme(

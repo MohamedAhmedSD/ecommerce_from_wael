@@ -1,8 +1,14 @@
 import 'package:get/get.dart';
 
+//! extends from Translations
 class MyTranslation extends Translations {
   @override
+  //* its Map from Key == langcode with value as map contain key and value
+  //* we need make same number of sub maps for each language to avoid errors
+  //? son't forget this ==> Map should
+  //! get keys
   Map<String, Map<String, String>> get keys => {
+        //! get keys
         "ar": {
           "1": "اختر اللغة",
           "2": "اختر المنتجة",

@@ -7,11 +7,11 @@ import 'package:get/get.dart';
 import '../constants/apptheme.dart';
 
 class LocaleController extends GetxController {
-  // An identifier used to select a user's language and formatting preferences.
-  // make object from class
-  Locale? language;
+  //! An identifier used to select a user's language and formatting preferences.
+  //? 1. make object from class
+  Locale? language; //* we use it inside => onInit
 
-  // call our servicres
+  //? 2. call our servicres, by using => Get.find();
   MyServices myServices = Get.find();
 
   // make the method
@@ -46,26 +46,33 @@ class LocaleController extends GetxController {
 
   // new
 
-  // theme change
+  //? 3. theme change, we make an object from ThemeData
+  //* and give it default value
   ThemeData appTheme = themeEnglish;
 
-  //
+  //? 4. we pass language code and save it in sharedprefs,
+  //* by making method to do this
+
   changeLang(String langcode) {
+    //! make object from Locale
     Locale locale = Locale(langcode);
+    //? save your locale choose => inside sharedPref => by using services
     myServices.sharedPreferences.setString("lang", langcode);
-    // theme change according lang
+    //* now theme change according lang, we write this line
     appTheme = langcode == "ar" ? themeArabic : themeEnglish;
-    // apply it by Getx
+    //! apply it by Getx && update it
     Get.changeTheme(appTheme);
     Get.updateLocale(locale);
   }
 
+  //! we use Getx life cycle, onInit == init
   @override
   void onInit() {
+    //* get language value from sharedPrefs == String
     String? sharedPrefLang = myServices.sharedPreferences.getString("lang");
-    //  save lang and theme on sharedprefs
+    //!  save both lang and theme on sharedprefs ==>
     if (sharedPrefLang == "ar") {
-      // save lang
+      //? save languahe on locale and theme
       language = const Locale("ar");
       // we need save theme with certain lang choose
       appTheme = themeArabic;
@@ -73,6 +80,7 @@ class LocaleController extends GetxController {
       language = const Locale("en");
       appTheme = themeEnglish;
     } else {
+      //? if there another language => use that from device, with english theme
       language = Locale(Get.deviceLocale!.languageCode);
       appTheme = themeEnglish;
     }
