@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import '../../../controller/onboarding_controller.dart';
 import '../../widgets/onboarding/custombtn.dart';
 import '../../widgets/onboarding/customslider.dart';
 import '../../widgets/onboarding/dotscontroller.dart';
@@ -9,6 +11,9 @@ class OnBoardingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //* D.injection => OnBoardingControllerImpl
+    Get.put(OnBoardingControllerImpl());
+
     return Scaffold(
       body: SafeArea(
         //* we need 2 parts, fixed and moveable part

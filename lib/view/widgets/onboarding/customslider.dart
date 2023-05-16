@@ -1,14 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import '../../../controller/onboarding_controller.dart';
 import '../../../core/constants/color.dart';
 import '../../../data/datasource/static.dart';
 
-class CustomSlider extends StatelessWidget {
+//* D.injection => OnBoardingControllerImpl, use GetView<>
+//! covert StatelessWidget into  GetView<>
+//* no need to change my UI??
+class CustomSlider extends GetView<OnBoardingControllerImpl> {
   const CustomSlider({super.key});
 
   @override
   Widget build(BuildContext context) {
     return PageView.builder(
+      controller: controller.pageController,
+      //* it have onPageChanged attribute
+      onPageChanged: (val) {
+        //* print or current page index
+        // print(val);
+        //* access onboarding controller, use onPageChanged method
+        controller.onPageChanged(val);
+      },
       itemCount: onBoardingList.length,
       itemBuilder: (context, i) => Column(
         children: [
