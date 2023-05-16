@@ -26,7 +26,7 @@ class OnBoardingControllerImpl extends OnBoardingController {
         duration: const Duration(milliseconds: 900), curve: Curves.ease);
   }
 
-  //* when dots slide
+  //* when page slide
   @override
   onPageChanged(int index) {
     currentPage = index;

@@ -70,8 +70,8 @@
 - connect onboarding slider with controller (dots, continue btn)
 - build your onboarding controller and use it on (customslider,onboarding page)
         ## Methods:
-            - next();
-            - onPageChanged(int index);
+            - next();                    == pressed on button     
+            - onPageChanged(int index);  == slide a page
 ## [8] Onboarding:-
 
 
