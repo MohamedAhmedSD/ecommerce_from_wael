@@ -1,3 +1,4 @@
+import 'package:ecommerce_wah/data/datasource/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -22,8 +23,16 @@ class OnBoardingControllerImpl extends OnBoardingController {
   next() {
     //! don't forget ++; or you stuck on first page
     currentPage++;
-    pageController.animateToPage(currentPage,
-        duration: const Duration(milliseconds: 900), curve: Curves.ease);
+    //! also we need to check if it last one we go into login page
+    if (currentPage > onBoardingList.length - 1) {
+      //* go to login page
+      // print("Last page => go to login page");
+      //* don't back to onboarding page
+      Get.offAllNamed("/login");
+    } else {
+      pageController.animateToPage(currentPage,
+          duration: const Duration(milliseconds: 900), curve: Curves.ease);
+    }
   }
 
   //* when page slide

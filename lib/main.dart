@@ -1,3 +1,5 @@
+import 'package:ecommerce_wah/core/constants/routes.dart';
+import 'package:ecommerce_wah/view/screen/auth/login.dart';
 import 'package:ecommerce_wah/view/screen/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,10 +17,12 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Ecommerce App',
       theme: ThemeData(
-        
         primarySwatch: Colors.blue,
       ),
       home: const OnBoardingPage(),
+      getPages: [
+        GetPage(name: AppRoute.login, page: () => const Login()),
+      ],
     );
   }
 }

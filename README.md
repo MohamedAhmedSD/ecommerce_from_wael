@@ -73,5 +73,9 @@
             - next();                    == pressed on button     
             - onPageChanged(int index);  == slide a page
 ## [8] Onboarding:-
+- handle next method
+- use route
+- create login page
+
 
 
