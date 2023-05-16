@@ -27,4 +27,33 @@
 
 ## [2] Create a project:-
 - add packages, edit sdk versions, ensure use correct package version with gradle and sdk
-- create main project folders
+- create main project 4 folders => MVC + CORE
+
+
+## [3] Project structure:-
+- we can search for any design on google image as => auth page ui
+- or use website => on google => ecommerce app ui
+- cut image to use it later
+- Model :-
+            - data
+            - model
+- Core :-
+            - class
+            - constants
+            - functions
+            - localization
+            - services
+            - shared
+
+## [4] Onboarding:-
+- use GetMaterialApp on root
+- create on boarding page 
+- add assets
+
+## [5] Onboarding:-
+
+## [4] Onboarding:-
+## [4] Onboarding:-
+## [4] Onboarding:-
+
+

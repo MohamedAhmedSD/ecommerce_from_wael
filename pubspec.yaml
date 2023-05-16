@@ -40,6 +40,8 @@ dependencies:
   get: ^4.6.1
   # DateTime
   jiffy: ^5.0.0
+  # jiffy: ^6.1.0
+  # intl: ^0.18.1
   intl: ^0.17.0
   http: ^0.13.4
   # Images
@@ -49,26 +51,27 @@ dependencies:
   show_up_animation: ^2.0.0
   auto_animated: ^3.0.1
   # Google Map
-  flutter_polyline_points: ^1.0.0
-  google_maps_flutter: ^2.1.5
-  geolocator: ^9.0.2
-  geocoding: ^2.0.4
+  # flutter_polyline_points: ^1.0.0
+  # google_maps_flutter: ^2.1.5
+  # geolocator: ^9.0.2
+  # geocoding: ^2.0.4
   # Firebase And Notification 
-  firebase_messaging: ^14.4.0
-  firebase_core: ^2.9.0
-  flutter_local_notifications: ^14.0.0-dev.2
-  cloud_firestore: ^4.5.0
+  # firebase_messaging: ^14.4.0
+  # firebase_core: ^2.9.0
+  # flutter_local_notifications: ^14.0.0-dev.2
+  # cloud_firestore: ^4.5.0
   # Local Data Cache
-  sqflite: ^2.0.2
+  # sqflite: ^2.0.2
+  sqflite: ^2.2.8+3
   shared_preferences: ^2.0.15
   path: ^1.8.0
   # Qrcode 
-  qr_flutter: ^4.0.0
-  scan: ^1.6.0
-  grouped_list: ^5.1.2
-  url_launcher: ^6.1.2
-  dropdown_search: ^5.0.6
-  badges: ^3.0.3
+  # qr_flutter: ^4.0.0
+  # scan: ^1.6.0
+  # grouped_list: ^5.1.2
+  # url_launcher: ^6.1.2
+  # dropdown_search: ^5.0.6
+  # badges: ^3.0.3
   # Icon 
   # flutter_svg: ^1.0.3
   font_awesome_flutter: ^10.1.0
@@ -118,10 +121,12 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/Cairo/Cairo-Regular.ttf
+        - asset: assets/fonts/Cairo/Cairo-Bold.ttf
+          weight: 700
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
