@@ -77,5 +77,8 @@
 - use route
 - create login page
 
-
+## [9] TextTheme:-
+- how use textTheme inside ThemeData, and customize it and use it inside 
+  our onBoarding page through custom slider
+- add new font and use it as default app font family
 

@@ -27,7 +27,9 @@ class CustomSlider extends GetView<OnBoardingControllerImpl> {
         children: [
           Text(
             "${onBoardingList[i].title}",
-            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            // style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            //* use style from textTheme access as inheritance from Theme
+            style: Theme.of(context).textTheme.displayLarge,
           ),
           const SizedBox(
             height: 80,
@@ -50,12 +52,14 @@ class CustomSlider extends GetView<OnBoardingControllerImpl> {
             child: Text(
               "${onBoardingList[i].body}",
               textAlign: TextAlign.center,
-              style: const TextStyle(
-                height: 2,
-                color: AppColor.grey,
-                fontWeight: FontWeight.bold,
-                fontSize: 17,
-              ),
+              //* use style from textTheme access as inheritance from Theme
+              // style: const TextStyle(
+              //   height: 2,
+              //   color: AppColor.grey,
+              //   fontWeight: FontWeight.bold,
+              //   fontSize: 17,
+              // ),
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
           ),
         ],
