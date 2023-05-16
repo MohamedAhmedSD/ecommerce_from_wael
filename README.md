@@ -34,8 +34,8 @@
 - we can search for any design on google image as => auth page ui
 - or use website => on google => ecommerce app ui
 - cut image to use it later
-- Model :-
-            - data
+- data == model :-
+            - datasource
             - model
 - Core :-
             - class
@@ -51,6 +51,14 @@
 - add assets
 
 ## [5] Onboarding:-
+- create onboarding model to deal with its design contain (title,image,body)
+- static data => onboarding list
+- constants => image asset, color
+- start design page::::
+    # use PageView.builder 
+    - also use alignment to make it perfect design
+            - alignment: Alignment.center,
+            - textAlign: TextAlign.center,
 
 ## [4] Onboarding:-
 ## [4] Onboarding:-
