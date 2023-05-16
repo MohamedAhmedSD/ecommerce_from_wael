@@ -17,7 +17,7 @@ class OnBoardingControllerImpl extends OnBoardingController {
   //*
   late PageController pageController;
 
-  //* go to next page when press on it
+  //* go to next page when press on => continue btn
   @override
   next() {
     //! don't forget ++; or you stuck on first page
@@ -26,7 +26,7 @@ class OnBoardingControllerImpl extends OnBoardingController {
         duration: const Duration(milliseconds: 900), curve: Curves.ease);
   }
 
-  //*
+  //* when dots slide
   @override
   onPageChanged(int index) {
     currentPage = index;
