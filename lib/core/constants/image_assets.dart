@@ -2,8 +2,8 @@
 class AppImageAsset {
   //* save route of image asset on certain variable == rootImages
   static const String rootImages = "assets/images";
-  static const String onBoardingImage1 = "$rootImages/onboardingone.PNG";
-  static const String onBoardingImage2 = "$rootImages/onboardingtwo.PNG";
-  static const String onBoardingImage3 = "$rootImages/onboardingthree.PNG";
-  static const String onBoardingImage4 = "$rootImages/onboardingfour.PNG";
+  static const String onBoardingImageOne = "$rootImages/onboardingone.PNG";
+  static const String onBoardingImageTwo = "$rootImages/onboardingtwo.PNG";
+  static const String onBoardingImageThree = "$rootImages/onboardingthree.PNG";
+  static const String onBoardingImageFour = "$rootImages/onboardingfour.PNG";
 }

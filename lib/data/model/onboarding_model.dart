@@ -1,9 +1,9 @@
 //* make them nun-nullable
-class OnboardingModel {
+class OnBoardingModel {
   final String? title;
   final String? image;
   final String? body;
-  OnboardingModel({
+  OnBoardingModel({
     this.title,
     this.image,
     this.body,

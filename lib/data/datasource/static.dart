@@ -4,23 +4,25 @@ import '../../core/constants/image_assets.dart';
 import '../model/onboarding_model.dart';
 
 //* no need to change later
-List<OnboardingModel> onBoardingList = [
-  OnboardingModel(
-      title: "first",
-      image: AppImageAsset.onBoardingImage1,
-      body: "firstfirstfirs\ntfirstfirstfirstfi\nrstfirstfirstfirstfirst"),
-  OnboardingModel(
-      title: "second",
-      image: AppImageAsset.onBoardingImage2,
-      body: "secondsecondsecond\nsecondsecondsecondsecond\nsecondsecondsecond"),
-  OnboardingModel(
-      title: "third",
-      image: AppImageAsset.onBoardingImage3,
+List<OnBoardingModel> onBoardingList = [
+  OnBoardingModel(
+      title: "Choose Product",
       body:
-          "thirdthirdthirdthirdthird\nthirdthirdthirdthirdthird\nthirdthirdthird"),
-  OnboardingModel(
-      title: "fourth",
-      image: AppImageAsset.onBoardingImage4,
+          "We Have a 100k Product , Choose \n Your Product From  Our \n E-commerce Shop",
+      image: AppImageAsset.onBoardingImageOne),
+  OnBoardingModel(
+      title: "Easy And Safe Paymnet",
       body:
-          "fourthfourthfourth\nfourthfourthfourthfourth\nfourthfourthfourthfourth"),
+          "We Have a 100k Product , Choose \n Your Product From Our E-commerce Shop",
+      image: AppImageAsset.onBoardingImageTwo),
+  OnBoardingModel(
+      title: "Track Your Order",
+      body:
+          "We Have a 100k Product , Choose \n Your Product From Our E-commerce Shop",
+      image: AppImageAsset.onBoardingImageThree),
+  OnBoardingModel(
+      title: "Fast Delivery",
+      body:
+          "We Have a 100k Product , Choose \n Your Product From Our E-commerce Shop",
+      image: AppImageAsset.onBoardingImageFour),
 ];
