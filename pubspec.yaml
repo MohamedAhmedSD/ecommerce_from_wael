@@ -39,17 +39,17 @@ dependencies:
   ## add packages
   get: ^4.6.1
   # DateTime
-  jiffy: ^5.0.0
+  # jiffy: ^5.0.0
   # jiffy: ^6.1.0
   # intl: ^0.18.1
-  intl: ^0.17.0
-  http: ^0.13.4
+  # intl: ^0.17.0
+  # http: ^0.13.4
   # Images
-  cached_network_image: ^3.2.0 
-  image_picker: ^0.8.7+1
+  # cached_network_image: ^3.2.0 
+  # image_picker: ^0.8.7+1
   # Animate
-  show_up_animation: ^2.0.0
-  auto_animated: ^3.0.1
+  # show_up_animation: ^2.0.0
+  # auto_animated: ^3.0.1
   # Google Map
   # flutter_polyline_points: ^1.0.0
   # google_maps_flutter: ^2.1.5
@@ -74,14 +74,14 @@ dependencies:
   # badges: ^3.0.3
   # Icon 
   # flutter_svg: ^1.0.3
-  font_awesome_flutter: ^10.1.0
-  fluttericon: ^2.0.0
-  dartz: ^0.10.1
+  # font_awesome_flutter: ^10.1.0
+  # fluttericon: ^2.0.0
+  # dartz: ^0.10.1
   # Google Auth
-  google_sign_in: ^6.0.2  
-  device_preview: ^1.1.0
-  responsive_builder: ^0.6.4
-  image_pickers: ^2.0.0+2
+  # google_sign_in: ^6.0.2  
+  # device_preview: ^1.1.0
+  # responsive_builder: ^0.6.4
+  # image_pickers: ^2.0.0+2
 
 dev_dependencies:
   flutter_test:

@@ -60,8 +60,15 @@
             - alignment: Alignment.center,
             - textAlign: TextAlign.center,
 
-## [4] Onboarding:-
-## [4] Onboarding:-
-## [4] Onboarding:-
+## [6] Onboarding:-
+- add dots as to control pages on page view
+- add btn 
+- make your onboarding widgets to make it easy code to read and modify
+- becarful when dealing with code, where? and why?we use expanded and flex
+
+## [7] Onboarding:-
+- connect onboarding slider with controller (dots, continue btn)
+- build your onboarding controller and use it on (customslider,onboarding page)
+## [8] Onboarding:-
 
 
