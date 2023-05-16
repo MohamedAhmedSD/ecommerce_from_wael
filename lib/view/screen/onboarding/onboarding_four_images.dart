@@ -1,4 +1,3 @@
-import 'package:ecommerce_wah/core/constants/color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -17,7 +16,7 @@ class OnBoardingPage extends StatelessWidget {
 
     return Scaffold(
       //* change BG color
-      backgroundColor: AppColor.backGroundColor,
+      // backgroundColor: AppColor.grey,
       body: SafeArea(
         //* we need 2 parts, fixed and moveable part
         //? ===============[part 1] moveable part ========================

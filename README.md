@@ -82,3 +82,7 @@
   our onBoarding page through custom slider
 - add new font and use it as default app font family
 
+## [10] ReTouch onBoarding:-
+- how we change onboarding page colors and images that used on it
+- change images at constants folder
+
