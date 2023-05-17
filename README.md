@@ -100,3 +100,8 @@ then call them on main file
 - I make huge error => put route inside "" => ["AppRoute.onBoarding"]
 
 ## [14] to [16] Login page UI:-
+- build Login page UI, and create its widgets
+
+## [17] to [18] SignUp UI && Forget password:-
+- design UI for pages [signup, forgot password, reset password, verify code]
+- make controller for [login, signup, forgot password]

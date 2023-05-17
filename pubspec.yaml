@@ -91,6 +91,10 @@ dependencies:
   # responsive_builder: ^0.6.4
   # image_pickers: ^2.0.4+1
 
+  # Others
+  flutter_otp_text_field: ^1.0.1
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -116,6 +120,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
+    - assets/images/
     - assets/images/onboardingone.PNG
     - assets/images/onboardingtwo.PNG
     - assets/images/onboardingthree.PNG
@@ -123,6 +128,7 @@ flutter:
     - assets/images/one.PNG
     - assets/images/two.PNG
     - assets/images/three.PNG
+    - assets/images/logoapp.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
