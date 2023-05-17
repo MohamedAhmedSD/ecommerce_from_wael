@@ -5,6 +5,7 @@ import 'package:ecommerce_wah/view/screen/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'core/localization/translation.dart';
 import 'core/services/services.dart';
 
 void main() async {
@@ -39,6 +40,8 @@ class MyApp extends StatelessWidget {
         ),
         primarySwatch: Colors.blue,
       ),
+      //* translation
+      translations: MyTranslation(),
       home: const OnBoardingPage(),
       getPages: [
         GetPage(name: AppRoute.login, page: () => const Login()),
