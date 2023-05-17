@@ -63,6 +63,7 @@ class CustomTextFormAuth extends StatelessWidget {
 
             //* icon that not required
             //? ontapIcon is funsion under inkwell => to use it with password hiden
+            //! will we use IconData always to create icons inside TFF
             suffixIcon: InkWell(onTap: onTapIcon, child: Icon(iconData)),
             border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(30))),

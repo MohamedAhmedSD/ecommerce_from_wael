@@ -15,8 +15,8 @@ import '../../widgets/auth/texttoggle.dart';
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
 
-    //* we need wrap them ListView under Form,
-    //* and all wrap under WillPopScope
+  //* we need wrap them ListView under Form,
+  //* and all wrap under WillPopScope
 
   @override
   Widget build(BuildContext context) {
@@ -36,20 +36,19 @@ class Login extends StatelessWidget {
       ),
       // we wrap it under dialog widget
       // to tell user when press back is he sure then exit
-            //* wrap all under => WillPopScope
+      //* wrap all under => WillPopScope
       //* // it built-in widget
 
       body: WillPopScope(
         onWillPop: alertExitApp, //* take function we make it
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
-                   //* use listView to carry scrollable list of widgets
+          //* use listView to carry scrollable list of widgets
 
           child: Form(
             //* we bring our key from controller
             key: controller.formstate,
-            child: ListView(
-              children: [
+            child: ListView(children: [
               const LogoAuth(),
               const SizedBox(height: 20),
               //* when use tr == translation ensure you delete const from your widget
@@ -70,7 +69,8 @@ class Login extends StatelessWidget {
                 mycontroller: controller.email,
                 hinttext: "12".tr, // "Enter Your Email"
                 iconData: Icons.email_outlined,
-                labeltext: "18".tr, obscureText: false, onTapIcon: () {  }, // "Email"
+                labeltext: "18".tr, obscureText: false,
+                onTapIcon: () {}, // "Email"
                 // mycontroller: ,
               ),
               GetBuilder<LoginControllerImp>(
@@ -113,7 +113,7 @@ class Login extends StatelessWidget {
                     controller.login();
                   }),
               const SizedBox(height: 40),
- //? =========== [we can use toggle here] =========
+              //? =========== [we can use toggle here] =========
               // Row(
               //   mainAxisAlignment: MainAxisAlignment.center,
               //   children: const [
@@ -127,8 +127,8 @@ class Login extends StatelessWidget {
               //   ],
               // ),
 
-              //* use toggle now ===============================================   
-                        CustomTextSignUpOrSignIn(
+              //* use toggle now ===============================================
+              CustomTextSignUpOrSignIn(
                 textone: "16".tr, // "Don't have an account ? "
                 texttwo: "17".tr, // "SignUp"
                 onTap: () {
@@ -143,7 +143,6 @@ class Login extends StatelessWidget {
     );
   }
 }
-
 
 //! [notes]:
 /*
