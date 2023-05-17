@@ -107,7 +107,7 @@ class Login extends StatelessWidget {
                   textAlign: TextAlign.end,
                 ),
               ),
-              CustomButtomAuth(
+              CustomButtonAuth(
                   text: "15".tr, // "Sign In"
                   onPressed: () {
                     controller.login();

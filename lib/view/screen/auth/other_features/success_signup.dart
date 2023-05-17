@@ -44,7 +44,7 @@ class SuccessSignUp extends StatelessWidget {
           // after success we go to login
           SizedBox(
             width: double.infinity,
-            child: CustomButtomAuth(
+            child: CustomButtonAuth(
                 text: "31".tr,
                 onPressed: () {
                   controller.goToPageLogin();

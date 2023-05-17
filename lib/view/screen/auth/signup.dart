@@ -96,7 +96,7 @@ class SignUp extends StatelessWidget {
                 labeltext: "19".tr, // "Password"
                 // mycontroller: ,
               ),
-              CustomButtomAuth(
+              CustomButtonAuth(
                   text: "Sign Up", // "Sign Up"
                   onPressed: () {
                     controller.signUp();

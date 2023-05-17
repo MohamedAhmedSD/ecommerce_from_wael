@@ -9,8 +9,6 @@ import '../../../../widgets/auth/customtextbodyauth.dart';
 import '../../../../widgets/auth/customtextformauth.dart';
 import '../../../../widgets/auth/customtexttitleauth.dart';
 
-
-
 // after verify code done
 // we send him to reset its pw
 class ResetPassword extends StatelessWidget {
@@ -64,7 +62,7 @@ class ResetPassword extends StatelessWidget {
               labeltext: "19".tr,
               // mycontroller: ,
             ),
-            CustomButtomAuth(
+            CustomButtonAuth(
                 text: "33".tr,
                 onPressed: () {
                   controller.goToSuccessResetPassword();

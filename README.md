@@ -107,3 +107,4 @@ then call them on main file
 - make controller for [login, signup, forgot password]
 
 ## [19] to [26] Complete Authentication pages + OTP:
+- 

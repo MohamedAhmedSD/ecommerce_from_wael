@@ -21,6 +21,7 @@ class CustomTextSignUpOrSignIn extends StatelessWidget {
         Text(textone),
         InkWell(
           onTap: onTap,
+          //* only part allowed to pressed on it
           child: Text(texttwo,
               style: const TextStyle(
                   color: AppColor.primaryColor, fontWeight: FontWeight.bold)),

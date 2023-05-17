@@ -5,7 +5,6 @@ import '../../../../../controller/auth/other_features/successresetpassword_contr
 import '../../../../../core/constants/color.dart';
 import '../../../../widgets/auth/custombuttonauth.dart';
 
-
 class SuccessResetPassword extends StatelessWidget {
   const SuccessResetPassword({Key? key}) : super(key: key);
 
@@ -42,7 +41,7 @@ class SuccessResetPassword extends StatelessWidget {
           const Spacer(),
           SizedBox(
             width: double.infinity,
-            child: CustomButtomAuth(
+            child: CustomButtonAuth(
                 text: "31".tr,
                 onPressed: () {
                   controller.goToPageLogin();
