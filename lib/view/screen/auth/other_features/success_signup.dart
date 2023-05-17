@@ -7,7 +7,6 @@ import '../../../../core/constants/color.dart';
 import '../../../widgets/auth/custombuttonauth.dart';
 
 
-
 class SuccessSignUp extends StatelessWidget {
   const SuccessSignUp({Key? key}) : super(key: key);
 

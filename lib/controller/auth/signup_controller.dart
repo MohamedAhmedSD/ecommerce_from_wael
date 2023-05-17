@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 
 import '../../core/constants/routes.dart';
@@ -12,6 +13,8 @@ abstract class SignUpController extends GetxController {
 
 class SignUpControllerImp extends SignUpController {
   //? we write our code logic here, to separate logic from view
+
+  GlobalKey<FormState> formstate = GlobalKey<FormState>();
 
   //? ================== [deal with TEC, and its life cycle] =================
   //* make our TextEditingController, that we need to when complete TFF
@@ -45,7 +48,21 @@ class SignUpControllerImp extends SignUpController {
 
   //* 1. signUp process
   @override
-  signUp() {}
+  signUp() {
+    if (formstate.currentState!.validate()) {
+      Get.offNamed(AppRoute.verfiyCodeSignUp);
+      // to avoid cache memory we need delete memory
+      // after nav me to next pge
+      // so data will delete if I back to them
+      Get.delete<SignUpControllerImp>();
+      // our instead of use delete =>
+      // we can use lazyPut as inject on our view page instead put
+    } else {
+      if (kDebugMode) {
+        print("Not Valid");
+      }
+    }
+  }
 
   //? ================ [nav methods] =================
   @override

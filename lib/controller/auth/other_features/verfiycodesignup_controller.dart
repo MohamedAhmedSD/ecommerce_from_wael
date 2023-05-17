@@ -2,13 +2,15 @@ import 'package:get/get.dart';
 
 import '../../../core/constants/routes.dart';
 
+
 abstract class VerifyCodeSignUpController extends GetxController {
   checkCode();
   goToSuccessSignUp();
 }
 
-class VerifyCodeSignUpControllerImp extends VerifyCodeSignUpController {
-  late String verifycode;
+class VerifyCodeSignUpControllerImp extends VerifyCodeSignUpController {  
+
+  late String verifycode  ; 
 
   @override
   checkCode() {}
@@ -19,7 +21,9 @@ class VerifyCodeSignUpControllerImp extends VerifyCodeSignUpController {
   }
 
   // @override
-  // void onInit() {
+  // void onInit() {  
   //   super.onInit();
   // }
+
+ 
 }

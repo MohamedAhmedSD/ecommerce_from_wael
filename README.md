@@ -105,3 +105,5 @@ then call them on main file
 ## [17] to [18] SignUp UI && Forget password:-
 - design UI for pages [signup, forgot password, reset password, verify code]
 - make controller for [login, signup, forgot password]
+
+## [19] to [26] Complete Authentication pages + OTP:

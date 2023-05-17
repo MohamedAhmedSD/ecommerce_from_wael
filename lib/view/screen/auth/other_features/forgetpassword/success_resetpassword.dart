@@ -6,7 +6,6 @@ import '../../../../../core/constants/color.dart';
 import '../../../../widgets/auth/custombuttonauth.dart';
 
 
-
 class SuccessResetPassword extends StatelessWidget {
   const SuccessResetPassword({Key? key}) : super(key: key);
 
