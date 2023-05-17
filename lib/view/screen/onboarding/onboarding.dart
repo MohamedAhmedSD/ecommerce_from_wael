@@ -17,7 +17,7 @@ class OnBoardingPage extends StatelessWidget {
 
     return Scaffold(
       //* change BG color
-      backgroundColor: AppColor.backGroundColor,
+      backgroundColor: AppColor.backgroundcolor,
       body: SafeArea(
         //* we need 2 parts, fixed and moveable part
         //? ===============[part 1] moveable part ========================

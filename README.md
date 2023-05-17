@@ -98,3 +98,5 @@ then call them on main file
 ## [13] Locale controller
 - create our locale and conect it with entire app
 - I make huge error => put route inside "" => ["AppRoute.onBoarding"]
+
+## [14] to [16] Login page UI:-
