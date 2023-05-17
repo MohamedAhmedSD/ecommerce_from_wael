@@ -86,7 +86,11 @@
 - how we change onboarding page colors and images that used on it
 - change images at constants folder
 
-## [11] Services and Localizations
+## [11] Services and Localizations:-
 - create services file to call SP and make your initialServices method 
 then call them on main file
 - create simple translations file then call it on main file
+
+## [12] Language page design:-
+- create language page && its widget
+- some time if not write onPressed: () {}, btn not appear on screen
