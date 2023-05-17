@@ -94,3 +94,7 @@ then call them on main file
 ## [12] Language page design:-
 - create language page && its widget
 - some time if not write onPressed: () {}, btn not appear on screen
+
+## [13] Locale controller
+- create our locale and conect it with entire app
+- I make huge error => put route inside "" => ["AppRoute.onBoarding"]

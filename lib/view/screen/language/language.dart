@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../core/constants/routes.dart';
 import '../../../core/localization/localecontroller.dart';
 import '../../widgets/language/custombuttonlang.dart';
 
@@ -33,7 +34,7 @@ class Language extends GetView<LocalController> {
             onPressed: () {
               controller.changeLang("ar");
               //! [better] : when nav no way to back to this page
-              Get.offNamed("AppRoute.onBoarding");
+              Get.offNamed(AppRoute.onBoarding);
             },
           ),
           CustomButtonLang(
@@ -42,7 +43,9 @@ class Language extends GetView<LocalController> {
             onPressed: () {
               controller.changeLang("en");
               //! [better] : when nav no way to back to this page
-              Get.offNamed("AppRoute.onBoarding");
+              //* I make huge error => put route inside ""
+              //* ["AppRoute.onBoarding"]
+              Get.offNamed(AppRoute.onBoarding);
             },
           ),
         ],

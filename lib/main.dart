@@ -1,8 +1,6 @@
-import 'package:ecommerce_wah/view/screen/onboarding/onboarding.dart';
+import 'package:ecommerce_wah/routes.dart';
 
 import '../core/constants/color.dart';
-import '../core/constants/routes.dart';
-import '../view/screen/auth/login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -52,11 +50,12 @@ class MyApp extends StatelessWidget {
       locale: controller.language,
       //* start from Language page
       home: const Language(),
-      getPages: [
-        GetPage(name: AppRoute.login, page: () => const Login()),
-        GetPage(name: AppRoute.language, page: () => const Language()),
-        GetPage(name: AppRoute.onBoarding, page: () => const OnBoardingPage()),
-      ],
+      routes: routes,
+      // getPages: [
+      //   GetPage(name: AppRoute.login, page: () => const Login()),
+      //   GetPage(name: AppRoute.language, page: () => const Language()),
+      //   GetPage(name: AppRoute.onBoarding, page: () => const OnBoardingPage()),
+      // ],
     );
   }
 }
