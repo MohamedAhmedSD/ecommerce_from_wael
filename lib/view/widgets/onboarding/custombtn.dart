@@ -21,7 +21,7 @@ class CustomButtonOnBoarding extends GetView<OnBoardingControllerImpl> {
           //* call next method from => OnBoardingControllerImpl
           controller.next();
         },
-        child: const Text("Contniue"),
+        child: Text("8".tr),
       ),
     );
   }

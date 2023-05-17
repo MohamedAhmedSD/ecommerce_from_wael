@@ -29,7 +29,8 @@ class Language extends GetView<LocalController> {
           //? some time if not write onPressed: () {},
           //* btn not appear on screen
           CustomButtonLang(
-            textbutton: 'Ar',
+            // textbutton: 'Ar',
+            textbutton: '39'.tr,
             //! [not good practice to write method here, but it small code]
             onPressed: () {
               controller.changeLang("ar");
@@ -38,7 +39,8 @@ class Language extends GetView<LocalController> {
             },
           ),
           CustomButtonLang(
-            textbutton: 'En',
+            // textbutton: 'En',
+            textbutton: '40'.tr,
             //! [not good practice to write method here, but it small code]
             onPressed: () {
               controller.changeLang("en");
