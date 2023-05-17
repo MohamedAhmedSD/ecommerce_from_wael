@@ -5,7 +5,12 @@ import 'package:ecommerce_wah/view/screen/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-void main() {
+import 'core/services/services.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  //* call global method, that call our services
+  await initialServices();
   runApp(const MyApp());
 }
 
