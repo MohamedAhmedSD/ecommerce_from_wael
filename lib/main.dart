@@ -1,9 +1,12 @@
-import 'package:ecommerce_wah/core/constants/color.dart';
-import 'package:ecommerce_wah/core/constants/routes.dart';
-import 'package:ecommerce_wah/view/screen/auth/login.dart';
+import 'package:ecommerce_wah/view/screen/onboarding/onboarding.dart';
+
+import '../core/constants/color.dart';
+import '../core/constants/routes.dart';
+import '../view/screen/auth/login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'core/localization/localecontroller.dart';
 import 'core/localization/translation.dart';
 import 'core/services/services.dart';
 import 'view/screen/language/language.dart';
@@ -21,6 +24,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    //* inject Locale => to deal with languages
+    LocalController controller = Get.put(LocalController());
+
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Ecommerce App',
@@ -42,11 +48,14 @@ class MyApp extends StatelessWidget {
       ),
       //* translation
       translations: MyTranslation(),
+      //* locale == language
+      locale: controller.language,
       //* start from Language page
       home: const Language(),
       getPages: [
         GetPage(name: AppRoute.login, page: () => const Login()),
         GetPage(name: AppRoute.language, page: () => const Language()),
+        GetPage(name: AppRoute.onBoarding, page: () => const OnBoardingPage()),
       ],
     );
   }

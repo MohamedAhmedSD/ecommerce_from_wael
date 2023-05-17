@@ -1,4 +1,4 @@
-import 'package:ecommerce_wah/core/constants/color.dart';
+import '../../../core/constants/color.dart';
 import 'package:flutter/material.dart';
 
 class CustomButtonLang extends StatelessWidget {

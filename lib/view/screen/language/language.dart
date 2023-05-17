@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import '../../../core/localization/localecontroller.dart';
 import '../../widgets/language/custombuttonlang.dart';
 
-class Language extends StatelessWidget {
+//* use GetView to use injected LocalController
+class Language extends GetView<LocalController> {
   const Language({super.key});
 
   @override
@@ -15,7 +18,8 @@ class Language extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Choose Language",
+            // "Choose Language",
+            "1".tr,
             style: Theme.of(context).textTheme.displayLarge,
           ),
           const SizedBox(
@@ -25,11 +29,21 @@ class Language extends StatelessWidget {
           //* btn not appear on screen
           CustomButtonLang(
             textbutton: 'Ar',
-            onPressed: () {},
+            //! [not good practice to write method here, but it small code]
+            onPressed: () {
+              controller.changeLang("ar");
+              //! [better] : when nav no way to back to this page
+              Get.offNamed("AppRoute.onBoarding");
+            },
           ),
           CustomButtonLang(
             textbutton: 'En',
-            onPressed: () {},
+            //! [not good practice to write method here, but it small code]
+            onPressed: () {
+              controller.changeLang("en");
+              //! [better] : when nav no way to back to this page
+              Get.offNamed("AppRoute.onBoarding");
+            },
           ),
         ],
       ),
