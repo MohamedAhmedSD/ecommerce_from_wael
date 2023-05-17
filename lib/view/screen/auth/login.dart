@@ -78,6 +78,7 @@ class Login extends StatelessWidget {
                   // we use both
                   // obscureText && onTapIcon
                   obscureText: controller.isshowpassword,
+                  //* here we use => onTapIcon => because we on PW
                   onTapIcon: () {
                     controller.showPassword();
                     // but widget not refresh if not under

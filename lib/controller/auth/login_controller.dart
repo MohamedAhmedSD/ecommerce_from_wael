@@ -7,8 +7,8 @@ import '../../core/constants/routes.dart';
 abstract class LoginController extends GetxController {
   //* 0. form key
   //* we use form to deal with our tff
-
   GlobalKey<FormState> formstate = GlobalKey<FormState>();
+
   //* 1. Login process
   login();
   //* 2. nav into SignUp page
@@ -43,11 +43,12 @@ class LoginControllerImp extends LoginController {
 
   //? ================ [login method] =================
 
-  //* empty till written
+  //* // when use login function
   @override
   login() {
-    // when use login function
-    // we need check is our field vaild according our validators our not
+    //* we need check is our fields vaild according our validators our not
+    //? determines it by using formstate
+
     var formdata = formstate.currentState;
     if (formdata!.validate()) {
       if (kDebugMode) {
@@ -65,9 +66,10 @@ class LoginControllerImp extends LoginController {
   //* 2. nav into SignUp page
   @override
   goToSignUp() {
-    // toNmed , may cause duplicate Globalkey
-    // to avoid them use offNamed
-    // Get.toNamed(AppRoute.signUp);
+    //! toNmed , may cause duplicate Globalkey
+    //? to avoid them use offNamed, [due to we go into page have also Global Key]
+    //* Get.toNamed(AppRoute.signUp);
+
     Get.offNamed(AppRoute.signUp);
   }
 
@@ -77,13 +79,16 @@ class LoginControllerImp extends LoginController {
     Get.toNamed(AppRoute.forgetPassword);
   }
 
-  // we make bool to deal with pw hidden or not
+  //? ================ [other methods] =================
+  //* we need method to determine is PW hidden or not
+
+  //* we make bool to deal with pw hidden or not
   bool isshowpassword = true;
 
   showPassword() {
-    // if true change to false , and vers versa
+    //* if true change to false , and vers versa == toggle
     isshowpassword = isshowpassword == true ? false : true;
-    // don't forget use update => UI update
+    //! don't forget use update => UI update
     update();
   }
 }

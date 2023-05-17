@@ -49,14 +49,18 @@ class SignUpControllerImp extends SignUpController {
   //* 1. signUp process
   @override
   signUp() {
+    //* we need check is our fields vaild according our validators our not
+    //? determines it by using formstate
     if (formstate.currentState!.validate()) {
       Get.offNamed(AppRoute.verfiyCodeSignUp);
-      // to avoid cache memory we need delete memory
-      // after nav me to next pge
-      // so data will delete if I back to them
+      //* to avoid cache memory we need delete <controller> from memory
+      //? after nav me to next pge
+      //! so data will delete if I back to them
+
+      //* ======== we delete our controller ======
       Get.delete<SignUpControllerImp>();
-      // our instead of use delete =>
-      // we can use lazyPut as inject on our view page instead put
+      //* or instead of use delete =>
+      //* we can use Get.lazyPut as inject on our view page instead Get.put
     } else {
       if (kDebugMode) {
         print("Not Valid");
