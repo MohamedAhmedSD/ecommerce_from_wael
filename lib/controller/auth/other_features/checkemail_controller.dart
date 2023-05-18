@@ -1,33 +1,33 @@
-import 'package:flutter/cupertino.dart';
-import 'package:get/get.dart';
+// import 'package:flutter/cupertino.dart';
+// import 'package:get/get.dart';
 
-import '../../../core/constants/routes.dart';
+// import '../../../core/constants/routes.dart';
 
-abstract class CheckEmailController extends GetxController {
-  checkemail();
-  goToVerfiyCode();
-}
+// abstract class CheckEmailController extends GetxController {
+//   checkemail();
+//   goToVerfiyCode();
+// }
 
-class CheckEmailControllerImp extends CheckEmailController {
-  late TextEditingController email;
+// class CheckEmailControllerImp extends CheckEmailController {
+//   late TextEditingController email;
 
-  @override
-  checkemail() {}
+//   @override
+//   checkemail() {}
 
-  @override
-  goToVerfiyCode() {
-    Get.offNamed(AppRoute.verfiyCodeSignUp);
-  }
+//   @override
+//   goToVerfiyCode() {
+//     Get.offNamed(AppRoute.verfiyCodeSignUp);
+//   }
 
-  @override
-  void onInit() {
-    email = TextEditingController();
-    super.onInit();
-  }
+//   @override
+//   void onInit() {
+//     email = TextEditingController();
+//     super.onInit();
+//   }
 
-  @override
-  void dispose() {
-    email.dispose();
-    super.dispose();
-  }
-}
+//   @override
+//   void dispose() {
+//     email.dispose();
+//     super.dispose();
+//   }
+// }

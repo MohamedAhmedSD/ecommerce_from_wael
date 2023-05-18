@@ -1,3 +1,4 @@
+import 'package:ecommerce_wah/core/services/services.dart';
 import 'package:ecommerce_wah/data/datasource/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -18,6 +19,13 @@ class OnBoardingControllerImpl extends OnBoardingController {
   //*
   late PageController pageController;
 
+  //! ======== [use onboarding] as indicator to middleware =========
+  MyServices myServices = Get.find();
+  //* set certain value to it when we reach to last page
+  //* and save it by SharedPref => setString
+  //? we can use setBool instead it
+  //!===============================================================
+
   //* go to next page when press on => continue btn
   @override
   next() {
@@ -27,6 +35,9 @@ class OnBoardingControllerImpl extends OnBoardingController {
     if (currentPage > onBoardingList.length - 1) {
       //* go to login page
       // print("Last page => go to login page");
+
+      //! connect with middleware
+      myServices.sharedPreferences.setString("onboarding", "1");
       //* don't back to onboarding page
       Get.offAllNamed("/login");
     } else {

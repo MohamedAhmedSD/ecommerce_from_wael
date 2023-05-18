@@ -3,10 +3,10 @@ import 'package:ecommerce_wah/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'bindings.dart';
 import 'core/localization/localecontroller.dart';
 import 'core/localization/translation.dart';
 import 'core/services/services.dart';
-import 'view/screen/language/language.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Ecommerce App',
-      
+
       //! controller for whole theme, not textTheme
       theme: controller.appTheme,
 
@@ -36,13 +36,12 @@ class MyApp extends StatelessWidget {
       //* locale == language
       locale: controller.language,
       //* start from Language page
-      home: const Language(),
-      routes: routes,
-      // getPages: [
-      //   GetPage(name: AppRoute.login, page: () => const Login()),
-      //   GetPage(name: AppRoute.language, page: () => const Language()),
-      //   GetPage(name: AppRoute.onBoarding, page: () => const OnBoardingPage()),
-      // ],
+      //* bindings
+      initialBinding: MyBinding(),
+      //! == [ we must not use home ] , if use it we start again from language
+      // home: const Language(),
+      // routes: routes,
+      getPages: routes,
     );
   }
 }

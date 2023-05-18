@@ -57,10 +57,13 @@ class SignUpControllerImp extends SignUpController {
       //? after nav me to next pge
       //! so data will delete if I back to them
 
+      //! == if use flutter routes we need delete or lazyput to deal with cache memory ==
       //* ======== we delete our controller ======
-      Get.delete<SignUpControllerImp>();
+      //* so when back to page it clear TFF
+      // Get.delete<SignUpControllerImp>();
       //* or instead of use delete =>
-      //* we can use Get.lazyPut as inject on our view page instead Get.put
+      //* we can use Get.lazyPut as inject on our page instead Get.put,
+      //? but we need to use GetBuilder to be able use controller
     } else {
       if (kDebugMode) {
         print("Not Valid");

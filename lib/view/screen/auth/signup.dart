@@ -19,11 +19,14 @@ class SignUp extends StatelessWidget {
     //* inject controller
     SignUpControllerImp controller = Get.put(SignUpControllerImp());
 
-    // when use lazyPut no need to use Get.delete
-    // put we can n't take from lazy controller so wrap
-    // your container under GetBuilder to use controller
-    // also we can use bindings with it
-    // SignUpControllerImp controller = Get.lazyPut(() => SignUpControllerImp(),finix:true);
+    //! when use lazyPut no need to use Get.delete
+    //* put we can n't take from lazy controller so wrap
+    //* your main container under GetBuilder to use controller
+    //* also we can use bindings with it
+
+    // SignUpControllerImp controller =
+    //     Get.lazyPut(() => SignUpControllerImp(), fenix: true);
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
