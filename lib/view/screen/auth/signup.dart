@@ -16,7 +16,7 @@ class SignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // inject controller
+    //* inject controller
     SignUpControllerImp controller = Get.put(SignUpControllerImp());
 
     // when use lazyPut no need to use Get.delete
@@ -35,33 +35,35 @@ class SignUp extends StatelessWidget {
                 .displayLarge!
                 .copyWith(color: AppColor.grey)),
       ),
-      body: //GetBuilder<SignUpControllerImp>(
+      body:
+          //* better use GetBuilder only on part we need to refresh its UI
+          //GetBuilder<SignUpControllerImp>(
           WillPopScope(
-        // it built0in widget
-        onWillPop: alertExitApp, // take function we make it
+        onWillPop: alertExitApp,
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
           child: Form(
             key: controller.formstate,
             child: ListView(children: [
               const SizedBox(height: 20),
-              CustomTextTitleAuth(text: "10".tr), //  "Welcome Back"
+              //  "Welcome Back"
+              CustomTextTitleAuth(text: "10".tr),
               const SizedBox(height: 10),
               CustomTextBodyAuth(
-                  text: "24"
-                      .tr), //"Sign Up With Your Email And Password OR Continue With Social Media"
+                  //"Sign Up With Your Email And Password OR Continue With Social Media"
+                  text: "24".tr),
               const SizedBox(height: 15),
               CustomTextFormAuth(
                 isNumber: false,
                 valid: (val) {
                   return validInput(val!, 3, 20, "username");
                 },
-                // using controller
                 mycontroller: controller.username,
-                hinttext: "23".tr, // "Enter Your Username"
+                // "Enter Your Username"
+                hinttext: "23".tr,
                 iconData: Icons.person_outline,
-                labeltext: "20".tr, // "Username"
-                // mycontroller: ,
+                // "Username"
+                labeltext: "20".tr,
               ),
               CustomTextFormAuth(
                 isNumber: false,
@@ -69,10 +71,11 @@ class SignUp extends StatelessWidget {
                   return validInput(val!, 3, 40, "email");
                 },
                 mycontroller: controller.email,
-                hinttext: "12".tr, // "Enter Your Email"
+                // "Enter Your Email"
+                hinttext: "12".tr,
                 iconData: Icons.email_outlined,
-                labeltext: "18".tr, // "Email"
-                // mycontroller: ,
+                // "Email"
+                labeltext: "18".tr,
               ),
               CustomTextFormAuth(
                 valid: (val) {
@@ -80,33 +83,40 @@ class SignUp extends StatelessWidget {
                 },
                 isNumber: true,
                 mycontroller: controller.phone,
-                hinttext: "22".tr, // "Enter Your Phone"
+                // "Enter Your Phone"
+                hinttext: "22".tr,
                 iconData: Icons.phone_android_outlined,
-                labeltext: "21".tr, // "Phone"
-                // mycontroller: ,
+                labeltext: "21".tr,
+                // "Phone"
               ),
+              //* == password here not use obscuretext or hidden password method ==
               CustomTextFormAuth(
                 isNumber: false,
                 valid: (val) {
                   return validInput(val!, 3, 30, "password");
                 },
                 mycontroller: controller.password,
-                hinttext: "13".tr, //"Enter Your Password"
+                //"Enter Your Password"
+                hinttext: "13".tr,
                 iconData: Icons.lock_outline,
-                labeltext: "19".tr, // "Password"
+                // "Password"
+                labeltext: "19".tr,
                 // mycontroller: ,
               ),
               CustomButtonAuth(
-                  text: "Sign Up", // "Sign Up"
+                  // "Sign Up"
+                  text: "17",
                   onPressed: () {
+                    //* go to success sigup
                     controller.signUp();
-                    // go to success sigup
                   }),
               const SizedBox(height: 40),
-              // nav to opposite
+              //* toggle => nav to opposite
               CustomTextSignUpOrSignIn(
-                textone: "25".tr, // " have an account ? "
-                texttwo: "26".tr, // " SignIn "
+                // " have an account ? "
+                textone: "25".tr,
+                // " SignIn "
+                texttwo: "26".tr,
                 onTap: () {
                   controller.goToSignIn();
                 },

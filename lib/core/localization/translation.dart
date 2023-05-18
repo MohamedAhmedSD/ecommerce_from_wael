@@ -46,6 +46,7 @@ class MyTranslation extends Translations {
           "36": "تم اعادة تعيين كلمة المرور بنجاح",
           "37": "تهانينا",
           "38": "تم التسجيل بنجاح",
+          //! [Language]
           "39": "عربي",
           "40": "انجليزي",
           //! [onboarding]
@@ -58,8 +59,11 @@ class MyTranslation extends Translations {
           "45": "تتبع طلبك",
           "46":
               "نمتلك العديد من المنتجات \n اختر منتجك من خلال \n متجرنا الالكتروني",
-          "47": "Choose Product",
-          "48": "Choose Product",
+          //! [alertexitapp]
+          "47": "تنبيه",
+          "48": "هل تريد الخروج من التطبيق",
+          "49": 'تاكيد',
+          '50': 'الغاء',
         },
         "en": {
           "1": "Choose Language",
@@ -104,8 +108,11 @@ class MyTranslation extends Translations {
           "36": "Password has been reset successfully",
           "37": "congratulations",
           "38": "successfully registered",
+          //! [Language]
           "39": "Ar",
           "40": "En",
+          //! [onboarding]
+
           "41": "Choose Product",
           "42":
               "We Have a 100k Product , Choose \n Your Product From  Our \n E-commerce Shop",
@@ -115,8 +122,11 @@ class MyTranslation extends Translations {
           "45": "Track Your Order",
           "46":
               "We Have a 100k Product , Choose \n Your Product From Our E-commerce Shop",
-          "47": "Choose Product",
-          "48": "Choose Product",
+          //! [alertexitapp]
+          "47": "Alert",
+          "48": "Do you want exit app?",
+          "49": 'Confirm',
+          '50': 'Cancel',
         }
       };
 }

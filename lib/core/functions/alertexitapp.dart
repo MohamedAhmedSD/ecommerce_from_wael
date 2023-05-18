@@ -3,22 +3,28 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../constants/color.dart';
-// function to solve back problem
+
+//* function to solve back problem
 Future<bool> alertExitApp() {
+  //? Get.defaultDialog ===================
+
   Get.defaultDialog(
-      title: "تنبيه",
+      title: "47".tr,
       titleStyle: const TextStyle(
           color: AppColor.primaryColor, fontWeight: FontWeight.bold),
-      middleText: "هل تريد الخروج من التطبيق",
+      middleText: "48".tr,
+
+      //* make two btns
       actions: [
         ElevatedButton(
             style: ButtonStyle(
                 backgroundColor:
                     MaterialStateProperty.all(AppColor.primaryColor)),
             onPressed: () {
+              //! ========== close app ==============
               exit(0);
             },
-            child: const Text("تاكيد")),
+            child: Text("49".tr)),
         ElevatedButton(
             style: ButtonStyle(
                 backgroundColor:
@@ -26,7 +32,9 @@ Future<bool> alertExitApp() {
             onPressed: () {
               Get.back();
             },
-            child: const Text("الغاء"))
+            child: Text("50".tr))
       ]);
+
+  //* Creates a future completed with [value].
   return Future.value(true);
 }

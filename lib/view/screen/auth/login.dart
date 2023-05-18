@@ -34,13 +34,18 @@ class Login extends StatelessWidget {
                 .displayLarge!
                 .copyWith(color: AppColor.grey)),
       ),
-      // we wrap it under dialog widget
-      // to tell user when press back is he sure then exit
+      //?===========================================================
+      //! we wrap it under dialog widget == WillPopScope
+      //? to tell user when press back is he ensure then exit
       //* wrap all under => WillPopScope
-      //* // it built-in widget
+      //* it built-in widget
+      //?===========================================================
 
       body: WillPopScope(
-        onWillPop: alertExitApp, //* take function we make it
+        //* take function we make it
+        //* it show only if function alertExitApp => back true value
+        onWillPop: alertExitApp,
+        //! ====== if back false ===============
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
           //* use listView to carry scrollable list of widgets
@@ -52,64 +57,72 @@ class Login extends StatelessWidget {
               const LogoAuth(),
               const SizedBox(height: 20),
               //* when use tr == translation ensure you delete const from your widget
-              CustomTextTitleAuth(text: "10".tr), // "Welcome Back"
+              // "Welcome Back"
+              CustomTextTitleAuth(text: "10".tr),
               const SizedBox(height: 10),
-              CustomTextBodyAuth(
-                  text: "11"
-                      .tr), // "Sign In With Your Email And Password OR Continue With Social Media"
+              // "Sign In With Your Email And Password OR Continue With Social Media"
+              CustomTextBodyAuth(text: "11".tr),
               const SizedBox(height: 15),
               CustomTextFormAuth(
-                // use our validator
+                //* use our validator
                 valid: (val) {
                   return validInput(val!, 5, 100, "email");
                 },
-                // kb
+                //* kb
                 isNumber: false,
                 //* by controller I can listen to what written inside field
                 mycontroller: controller.email,
-                hinttext: "12".tr, // "Enter Your Email"
+                // "Enter Your Email"
+                hinttext: "12".tr,
                 iconData: Icons.email_outlined,
+                // "Email"
                 labeltext: "18".tr, obscureText: false,
-                onTapIcon: () {}, // "Email"
-                // mycontroller: ,
+                onTapIcon: () {
+                  //! empty != PW
+                },
               ),
+              //*==========================================
+              //* we use GetBuilder => listen to UI refresh
+              //*==========================================
               GetBuilder<LoginControllerImp>(
                 builder: (controller) => CustomTextFormAuth(
-                  // we use both
-                  // obscureText && onTapIcon
+                  //!=============== we use both =================
+                  //?=========== obscureText && onTapIcon ========
                   obscureText: controller.isshowpassword,
                   //* here we use => onTapIcon => because we on PW
                   onTapIcon: () {
                     controller.showPassword();
-                    // but widget not refresh if not under
-                    // GetBuilder..
+                    //* but widget not refresh if not under => GetBuilder..
                   },
                   valid: (val) {
                     return validInput(val!, 5, 30, "password");
                   },
                   isNumber: false,
                   mycontroller: controller.password,
-                  hinttext: "13".tr, // "Enter Your Password"
+                  // "Enter Your Password"
+                  hinttext: "13".tr,
 
                   iconData: Icons.lock_outline,
-                  labeltext: "19".tr, // "Password"
-                  // mycontroller: ,
+                  // "Password"
+                  labeltext: "19".tr,
                 ),
               ),
 
               InkWell(
                 onTap: () {
-                  // nav by call method that nav => goToForgetPassword
+                  //* nav by call method that nav => goToForgetPassword
                   controller.goToForgetPassword();
                 },
+                // "Forget Password"
                 child: Text(
-                  "14".tr, // "Forget Password"
-                  // we align it to end
+                  "14".tr,
+                  //* we align it to end
                   textAlign: TextAlign.end,
                 ),
               ),
               CustomButtonAuth(
-                  text: "15".tr, // "Sign In"
+                  // "Sign In"
+                  text: "15".tr,
                   onPressed: () {
                     controller.login();
                   }),
@@ -130,10 +143,12 @@ class Login extends StatelessWidget {
 
               //* use toggle now ===============================================
               CustomTextSignUpOrSignIn(
-                textone: "16".tr, // "Don't have an account ? "
-                texttwo: "17".tr, // "SignUp"
+                // "Don't have an account ? "
+                textone: "16".tr,
+                // "SignUp"
+                texttwo: "17".tr,
                 onTap: () {
-                  // nav by call method that nav to => goToSignUp
+                  //* nav by call method that nav to => goToSignUp
                   controller.goToSignUp();
                 },
               )
