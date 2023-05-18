@@ -8,13 +8,13 @@ import '../../../../widgets/auth/customtextbodyauth.dart';
 import '../../../../widgets/auth/customtextformauth.dart';
 import '../../../../widgets/auth/customtexttitleauth.dart';
 
+//? how we check and go to verifycode:-
+//* by going to its page
+//? check :-
+//* by asking backend if user has email on it
+//* if found it send user into verify code page
+//* it recive code on its email or phone
 
-// how we check and go to verifycode
-// by going to its page
-// check
-// by asking backend if user has email on it
-// if found it send hem to verify code
-// it recive code on its email or phone
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({Key? key}) : super(key: key);
 
@@ -48,13 +48,13 @@ class ForgetPassword extends StatelessWidget {
             CustomTextFormAuth(
               isNumber: false,
               valid: (val) {
+                //* no need to check valid? is it good ==========================
                 return null;
               },
               mycontroller: controller.email,
               hinttext: "12".tr,
               iconData: Icons.email_outlined,
               labeltext: "18".tr,
-              // mycontroller: ,
             ),
             CustomButtonAuth(
                 text: "30".tr,

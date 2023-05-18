@@ -9,13 +9,15 @@ import '../../../../widgets/auth/customtextbodyauth.dart';
 import '../../../../widgets/auth/customtextformauth.dart';
 import '../../../../widgets/auth/customtexttitleauth.dart';
 
-// after verify code done
-// we send him to reset its pw
+//? after verify code done
+//* we send him to reset its pw
+
 class ResetPassword extends StatelessWidget {
   const ResetPassword({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    //* DI
     ResetPasswordControllerImp controller =
         Get.put(ResetPasswordControllerImp());
     return Scaffold(
@@ -48,11 +50,9 @@ class ResetPassword extends StatelessWidget {
               hinttext: "13".tr,
               iconData: Icons.lock_outline,
               labeltext: "19".tr,
-              // mycontroller: ,
             ),
             CustomTextFormAuth(
               isNumber: false,
-
               valid: (val) {
                 return validInput(val!, 3, 40, "password");
               },
@@ -60,7 +60,6 @@ class ResetPassword extends StatelessWidget {
               hinttext: "Re ${"13".tr}",
               iconData: Icons.lock_outline,
               labeltext: "19".tr,
-              // mycontroller: ,
             ),
             CustomButtonAuth(
                 text: "33".tr,
@@ -74,3 +73,5 @@ class ResetPassword extends StatelessWidget {
     );
   }
 }
+
+//! [we need method ] to check is 2 passwords are same

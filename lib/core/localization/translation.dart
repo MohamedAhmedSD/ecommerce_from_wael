@@ -64,6 +64,11 @@ class MyTranslation extends Translations {
           "48": "هل تريد الخروج من التطبيق",
           "49": 'تاكيد',
           '50': 'الغاء',
+          //! [verifycode_signup]
+          "51":"رمز التحقق",
+          "52":"تحقق من الكود",
+          "53":"من فضلك ادخل رقم النحقق المرسل للايميل",
+          "54":"",
         },
         "en": {
           "1": "Choose Language",
@@ -127,6 +132,11 @@ class MyTranslation extends Translations {
           "48": "Do you want exit app?",
           "49": 'Confirm',
           '50': 'Cancel',
+           //! [verifycode_signup]
+          "51":"Verification Code",
+          "52":"Check code",
+          "53":"Please Enter The Digit Code Sent To wael@gmail.com",
+          "54":"",
         }
       };
 }

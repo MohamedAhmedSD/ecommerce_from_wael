@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -6,12 +5,12 @@ import '../../../../controller/auth/other_features/successsignup_controller.dart
 import '../../../../core/constants/color.dart';
 import '../../../widgets/auth/custombuttonauth.dart';
 
-
 class SuccessSignUp extends StatelessWidget {
   const SuccessSignUp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    //* DI
     SuccessSignUpControllerImp controller =
         Get.put(SuccessSignUpControllerImp());
     return Scaffold(
@@ -29,11 +28,12 @@ class SuccessSignUp extends StatelessWidget {
         padding: const EdgeInsets.all(15),
         child: Column(children: [
           const Center(
-              child: Icon(
-            Icons.check_circle_outline,
-            size: 200,
-            color: AppColor.primaryColor,
-          )),
+            child: Icon(
+              Icons.check_circle_outline,
+              size: 200,
+              color: AppColor.primaryColor,
+            ),
+          ),
           Text("37".tr,
               style: Theme.of(context)
                   .textTheme
@@ -41,7 +41,7 @@ class SuccessSignUp extends StatelessWidget {
                   .copyWith(fontSize: 30)),
           Text("38".tr),
           const Spacer(),
-          // after success we go to login
+          //* ==== after success we go to login ===
           SizedBox(
             width: double.infinity,
             child: CustomButtonAuth(
