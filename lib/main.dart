@@ -1,6 +1,5 @@
 import 'package:ecommerce_wah/routes.dart';
 
-import '../core/constants/color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -28,30 +27,10 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Ecommerce App',
-      theme: ThemeData(
-        //* use custome font family
-        fontFamily: 'PlayfairDisplay',
-        textTheme: const TextTheme(
-            //* it can use alot of attributes as headline,bodyText... on old versions
-            //* or displayLarge ... on new versions
-            displayLarge: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 22,
-                color: AppColor.black),
-            bodyLarge: TextStyle(
-                height: 2,
-                fontWeight: FontWeight.bold,
-                fontSize: 14,
-                color: AppColor.grey),
-            displayMedium: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 26,
-                color: AppColor.black),
-            bodyMedium:
-                TextStyle(height: 2, color: AppColor.grey, fontSize: 14)),
+      
+      //! controller for whole theme, not textTheme
+      theme: controller.appTheme,
 
-        primarySwatch: Colors.blue,
-      ),
       //* translation
       translations: MyTranslation(),
       //* locale == language

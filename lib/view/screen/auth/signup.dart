@@ -105,7 +105,7 @@ class SignUp extends StatelessWidget {
               ),
               CustomButtonAuth(
                   // "Sign Up"
-                  text: "17",
+                  text: "17".tr,
                   onPressed: () {
                     //* go to success sigup
                     controller.signUp();
