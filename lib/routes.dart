@@ -36,6 +36,8 @@ List<GetPage<dynamic>>? routes = [
   //! ==================== [language] ====================
   GetPage(
       name: "/", page: () => const Language(), middlewares: [MyMiddleWare()]),
+  //* test page to test our internet connection
+  // GetPage(name: "/", page: () => const Test()),
   //! ==================== [onboarding] ====================
   GetPage(name: AppRoute.onBoarding, page: () => const OnBoardingPage()),
 //! ==================== [auth] ====================

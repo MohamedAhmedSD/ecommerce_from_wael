@@ -112,3 +112,33 @@ then call them on main file
 ## [27] MiddleWare:-
 - change route ways from flutter to getx style
 - use MiddleWare to skip both languages and onboarding pages in second entery to app
+
+## [28] Create Database:-
+- create database => ecommerce_wael
+- create table => users => contain 8 columns
+
+## [29] Create php start files and test connection:-
+- stop auth method 
+- text connection files with your DB
+
+## [30] Signup [backend]:-
+- create signup php file and test it
+- ensure we use unique email address and phone number in both database and php
+
+## [31] Send email:-
+- use our send email method
+- need to use host DB and upload php files
+- on dns should edit both => host + db name
+
+## [32 - 33] Verify code:-
+- make its php file
+- we can not use our hosting in right way it back that website need use JS
+- so I back to use localhost instead of them
+- [error] == "Fatal error: Cannot redeclare <function>" == you use function or call it more than once
+- as you include multitimes same file
+- [hint] use include "functions.php"; if on same level [not] include "./functions.php";
+- on thunder test => don't enter verifycode == we get it random
+- change hosting website => problem from there security theory
+
+## [34] Check Internet:-
+- build method and check its work ontest page on emulator is better.
