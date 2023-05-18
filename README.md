@@ -107,4 +107,8 @@ then call them on main file
 - make controller for [login, signup, forgot password]
 
 ## [19] to [26] Complete Authentication pages + OTP:
-- 
+- write them views & controllers + functions
+
+## [27] MiddleWare:-
+- change route ways from flutter to getx style
+- use MiddleWare to skip both languages and onboarding pages in second entery to app
