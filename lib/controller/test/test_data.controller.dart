@@ -11,6 +11,10 @@ class TestDataController extends GetxController {
   // TestData testData = TestData(crud);
   TestData testData = TestData(crud: Get.find());
 
+  //! [old]
+  // Crud crud = Crud();
+  // TestData testData = TestData(crud: Crud());
+
   List data = [];
 
   late StatusRequest statusRequest;
@@ -21,6 +25,7 @@ class TestDataController extends GetxController {
     statusRequest = StatusRequest.loading;
     //* save what back from testdata inside => response var
     var response = await testData.getData();
+    // var response = await testData.getDataLocalServer();
     //! [error] _TypeError (type 'Null' is not a subtype of type 'StatusRequest')
     //? error due to we not use return
     print("================================== Controller $response");

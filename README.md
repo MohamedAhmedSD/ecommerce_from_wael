@@ -151,3 +151,7 @@ then call them on main file
 - reread yhem again
 - how deal with errors
 - not fully tested, need internet connection
+
+## [39] to [40] handle data view && lottie:-
+- still I suffer with hosting server, try another one that allow api hosting
+
