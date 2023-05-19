@@ -154,4 +154,6 @@ then call them on main file
 
 ## [39] to [40] handle data view && lottie:-
 - still I suffer with hosting server, try another one that allow api hosting
+- as heroku, render, railway, cyclic,
+
 
