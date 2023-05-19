@@ -3,7 +3,7 @@ import 'package:ecommerce_wah/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'bindings.dart';
+import 'bindings/initial_bindings.dart';
 import 'core/localization/localecontroller.dart';
 import 'core/localization/translation.dart';
 import 'core/services/services.dart';

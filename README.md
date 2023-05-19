@@ -144,3 +144,10 @@ then call them on main file
 - build method and check its work ontest page on emulator is better.
 
 ## [35] CRUD && Request:-
+- make crud for both local && host 
+- make requestStatus probability
+
+## [36] to [38] deal with remote data and handling its response status:-
+- reread yhem again
+- how deal with errors
+- not fully tested, need internet connection

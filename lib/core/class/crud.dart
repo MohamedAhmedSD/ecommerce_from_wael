@@ -41,7 +41,7 @@ class CrudLocalServer {
   //* to use Either == functional programing method , we use dartz package
   //* may back Map [data from backend are json] or other things when there are error
 
-  Future<Map>? postData(String linkurl, Map data) async {
+  postData(String linkurl, Map data) async {
     try {
       var response = await http.post(Uri.parse(linkurl), body: data);
       print(response.statusCode);
@@ -53,12 +53,10 @@ class CrudLocalServer {
         return responsebody;
       } else {
         //* wrong page
-        print("no");
+        print("Error ${response.statusCode}");
       }
     } catch (e) {
       print(e);
     }
-
-    return data;
   }
 }
