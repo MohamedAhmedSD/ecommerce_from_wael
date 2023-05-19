@@ -22,12 +22,16 @@ class TestDataController extends GetxController {
     //* save what back from testdata inside => response var
     var response = await testData.getData();
     //! [error] _TypeError (type 'Null' is not a subtype of type 'StatusRequest')
-    //? error due to we not use return  
+    //? error due to we not use return
     print("================================== Controller $response");
     statusRequest = handlingData(response);
     //* when success
     if (StatusRequest.success == statusRequest) {
-      data.addAll(response['data']);
+      if (response['status'] == 'success') {
+        data.addAll(response['data']);
+      } else {
+        statusRequest = StatusRequest.failure;
+      }
     }
     //! don't forget update
     update();

@@ -16,7 +16,8 @@ class TestData {
   //* make method to display data
   getData() async {
     //! if not back data, review your link
-    var response = await crud.postData(AppLink.server, {});
+    // var response = await crud.postData(AppLink.server, {});
+    var response = await crud.postData(AppLink.testdata, {});
     // var response = await crud.postData(AppLink.localServerDigits, {});
     //* use fold to back l & r for Either
     //! don't forget return or will be get this error

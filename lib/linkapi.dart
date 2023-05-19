@@ -22,8 +22,8 @@ class AppLink {
       "http://127.0.0.1/ecommerce/wah/ecommerce_project/";
 
   //! ================= test data =================
-  static const String testdata = "$server/testdata.php";
+  // static const String testdata = "$server/testdata.php";
 
   //? online =>  testdataonlime.php
-  // static const String testdata = "$server/testdataonlime.php";
+  static const String testdata = "$server/testdataonlime.php";
 }
