@@ -1,7 +1,6 @@
 import 'package:ecommerce_wah/core/class/statusrequest.dart';
 import 'package:get/get.dart';
 
-import '../../core/functions/handlingdatacontroller.dart';
 import '../../data/datasource/remote/test_data.dart';
 
 class TestDataController extends GetxController {

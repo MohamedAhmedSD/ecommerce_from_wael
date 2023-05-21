@@ -4,7 +4,7 @@ import '../core/constants/routes.dart';
 import '../view/screen/auth/login.dart';
 import '../view/screen/onboarding/onboarding.dart';
 
-import 'testpages/test_data_view.dart';
+import 'core/middleware/mymiddleware.dart';
 import 'view/screen/auth/other_features/forgetpassword/forgetpassword.dart';
 import 'view/screen/auth/other_features/forgetpassword/resetpassword.dart';
 import 'view/screen/auth/other_features/forgetpassword/success_resetpassword.dart';
@@ -12,6 +12,7 @@ import 'view/screen/auth/other_features/forgetpassword/verifycode.dart';
 import 'view/screen/auth/other_features/success_signup.dart';
 import 'view/screen/auth/other_features/verifycode_signup.dart';
 import 'view/screen/auth/signup.dart';
+import 'view/screen/language/language.dart';
 
 //* flutter ordinary routes
 // Map<String, Widget Function(BuildContext)> routes = {
@@ -33,14 +34,14 @@ import 'view/screen/auth/signup.dart';
 
 List<GetPage<dynamic>>? routes = [
   //! ==================== [language] ====================
-  // GetPage(
-  //     name: "/", page: () => const Language(), middlewares: [MyMiddleWare()]),
+  GetPage(
+      name: "/", page: () => const Language(), middlewares: [MyMiddleWare()]),
   //! ==================== [test pages] ====================
   //* test page to test our internet connection
   // GetPage(name: "/", page: () => const Test()),
 
   //* test page to test our data
-  GetPage(name: "/", page: () => const TestDataView()),
+  // GetPage(name: "/", page: () => const TestDataView()),
   //! ==================== [onboarding] ====================
   GetPage(name: AppRoute.onBoarding, page: () => const OnBoardingPage()),
   //! ==================== [auth] ====================

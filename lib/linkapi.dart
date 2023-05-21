@@ -23,9 +23,6 @@ class AppLink {
   //! ================= test data =================
   static const String testdata = "$server/test/test_getalldata.php";
 
-  //? online =>  testdataonlime.php
-  // static const String testdata = "$server/testdataonlime.php";
-
-  // static const String testdata =
-  //     'http://sheikh.great-site.net/ecommerce_project/testdataonlime.php';
+  //! ================= Auth data =================
+  static const String signUp = "$server/auth/signup.php";
 }
