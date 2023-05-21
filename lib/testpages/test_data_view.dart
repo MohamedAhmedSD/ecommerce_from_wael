@@ -1,8 +1,9 @@
-import 'package:ecommerce_wah/controller/test/test_data.controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../core/class/handledataview.dart';
+import '../controller/test/test_data.controller.dart';
+import '../controller/test/test_datasecond_controller.dart';
+import '../core/class/handling_dataviewsecond.dart';
 import '../core/constants/color.dart';
 
 //! [old]
@@ -45,22 +46,28 @@ class TestDataView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //*DI
+    // Dependency Injection: creates a TestDataController instance and registers it in the GetX abstraction layer
     Get.put(TestDataController());
     return Scaffold(
       appBar: AppBar(
         title: const Text("Title"),
-        backgroundColor: AppColor.primaryColor,
+        backgroundColor: AppColor.primaryColor, // Sets the app bar color
       ),
-      body: GetBuilder<TestDataController>(builder: (controller) {
-        return HandlingDataView(
+      body: GetBuilder<TestDataController>(
+        builder: (controller) {
+          // Uses the HandlingDataView widget to display data based on the status of the request
+          return HandlingDataView(
             statusRequest: controller.statusRequest,
             widget: ListView.builder(
-                itemCount: controller.data.length,
-                itemBuilder: (context, index) {
-                  return Text("${controller.data}");
-                }));
-      }),
+              // Builds a ListView using the data from the controller
+              itemCount: controller.data.length,
+              itemBuilder: (context, index) {
+                return Text("${controller.data}");
+              },
+            ),
+          );
+        },
+      ),
     );
   }
 }

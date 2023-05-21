@@ -48,7 +48,8 @@ class SignUpControllerImp extends SignUpController {
   late TextEditingController email;
   late TextEditingController phone;
   late TextEditingController password;
-
+  
+  //* start life cycle of TEC
   @override
   void onInit() {
     username = TextEditingController();
@@ -58,6 +59,7 @@ class SignUpControllerImp extends SignUpController {
     super.onInit();
   }
 
+  //* end life cycle TEC
   @override
   void dispose() {
     username.dispose();
@@ -114,9 +116,7 @@ class SignUpControllerImp extends SignUpController {
 
   
 
-  //* start life cycle of TEC
   
-  //* end life cycle TEC
 
 
 
