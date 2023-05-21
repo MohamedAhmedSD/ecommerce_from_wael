@@ -4,7 +4,6 @@ import '../core/constants/routes.dart';
 import '../view/screen/auth/login.dart';
 import '../view/screen/onboarding/onboarding.dart';
 
-import 'testpages/test_data_view.dart';
 import 'view/screen/auth/other_features/forgetpassword/forgetpassword.dart';
 import 'view/screen/auth/other_features/forgetpassword/resetpassword.dart';
 import 'view/screen/auth/other_features/forgetpassword/success_resetpassword.dart';
@@ -12,6 +11,7 @@ import 'view/screen/auth/other_features/forgetpassword/verifycode.dart';
 import 'view/screen/auth/other_features/success_signup.dart';
 import 'view/screen/auth/other_features/verifycode_signup.dart';
 import 'view/screen/auth/signup.dart';
+import 'view/screen/auth/testsignup.dart';
 
 //* flutter ordinary routes
 // Map<String, Widget Function(BuildContext)> routes = {
@@ -40,7 +40,10 @@ List<GetPage<dynamic>>? routes = [
   // GetPage(name: "/", page: () => const Test()),
 
   //* test page to test our data
-  GetPage(name: "/", page: () => const TestDataView()),
+  // GetPage(name: "/", page: () => const TestDataView()),
+
+  GetPage(name: "/", page: () => const SignUpTest()),
+
   //! ==================== [onboarding] ====================
   GetPage(name: AppRoute.onBoarding, page: () => const OnBoardingPage()),
   //! ==================== [auth] ====================
