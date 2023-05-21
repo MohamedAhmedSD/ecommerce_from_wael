@@ -1,19 +1,14 @@
 import 'package:ecommerce_wah/core/class/statusrequest.dart';
-import 'package:ecommerce_wah/core/functions/handlingdatacontroller.dart';
 import 'package:get/get.dart';
 
+import '../../core/functions/handlingdatacontroller.dart';
 import '../../data/datasource/remote/test_data.dart';
 
 class TestDataController extends GetxController {
   //* it required Crud object
   //? we need avoid make instance from object every time so we use bindings
   //* to create it once, use Get.find()
-  // TestData testData = TestData(crud);
-  TestData testData = TestData(crud: Get.find());
-
-  //! [old]
-  // Crud crud = Crud();
-  // TestData testData = TestData(crud: Crud());
+  TestData testData = TestData(Get.find());
 
   List data = [];
 
@@ -29,7 +24,9 @@ class TestDataController extends GetxController {
     //! [error] _TypeError (type 'Null' is not a subtype of type 'StatusRequest')
     //? error due to we not use return
     print("================================== Controller $response");
-    statusRequest = handlingData(response);
+    // statusRequest = handlingData(response);
+    statusRequest = StatusRequest.success;
+
     //* when success
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == 'success') {

@@ -2,8 +2,7 @@ class AppLink {
   //! ================= server link =================
   //*?1. hosting name
   //* a. name
-  static const String server =
-      "http://sheikh.great-site.net/ecommerce_project/";
+  static const String server = "https://ecommerce-php-wah.herokuapp.com/";
 //* b. digits
   static const String serverDigits = "http://185.27.134.10/ecommerce_project/";
 
@@ -22,10 +21,10 @@ class AppLink {
       "http://127.0.0.1/ecommerce/wah/ecommerce_project/";
 
   //! ================= test data =================
-  // static const String testdata = "$server/testdata.php";
+  static const String testdata = "$server/test/test_getalldata.php";
 
   //? online =>  testdataonlime.php
-  static const String testdata = "$server/testdataonlime.php";
+  // static const String testdata = "$server/testdataonlime.php";
 
   // static const String testdata =
   //     'http://sheikh.great-site.net/ecommerce_project/testdataonlime.php';

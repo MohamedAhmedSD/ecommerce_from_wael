@@ -156,4 +156,5 @@ then call them on main file
 - still I suffer with hosting server, try another one that allow api hosting
 - as heroku, render, railway, cyclic,
 
+## we still have problems with hosting server, try use local server instead
 

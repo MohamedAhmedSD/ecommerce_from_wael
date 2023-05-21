@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../core/class/handledataview.dart';
-import '../core/class/statusrequest.dart';
 import '../core/constants/color.dart';
 
 //! [old]
@@ -40,12 +39,13 @@ import '../core/constants/color.dart';
 //   }
 // }
 
-//! [new]
+// //! [new]
 class TestDataView extends StatelessWidget {
   const TestDataView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    //*DI
     Get.put(TestDataController());
     return Scaffold(
       appBar: AppBar(

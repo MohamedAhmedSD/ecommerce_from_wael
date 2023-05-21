@@ -41,3 +41,4 @@ class HandlingDataView extends StatelessWidget {
                         : widget;
   }
 }
+
