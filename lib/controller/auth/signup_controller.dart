@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 
 import '../../core/class/statusrequest.dart';
 import '../../core/constants/routes.dart';
+import '../../core/functions/handlingdatacontroller.dart';
 
 abstract class SignUpController extends GetxController {
   //* 1. signUp process
@@ -11,33 +12,6 @@ abstract class SignUpController extends GetxController {
   //* 2. nav into Sign in page
   goToSignIn();
 }
-
-//? ================ [signUp method] =================
-
-//* 1. signUp process
-// @override
-// signUp() {
-//   //* we need check is our fields vaild according our validators our not
-//   //? determines it by using formstate
-//   if (formstate.currentState!.validate()) {
-//     Get.offNamed(AppRoute.verfiyCodeSignUp);
-//     //* to avoid cache memory we need delete <controller> from memory
-//     //? after nav me to next pge
-//     //! so data will delete if I back to them
-
-//     //! == if use flutter routes we need delete or lazyput to deal with cache memory ==
-//     //* ======== we delete our controller ======
-//     //* so when back to page it clear TFF
-//     // Get.delete<SignUpControllerImp>();
-//     //* or instead of use delete =>
-//     //* we can use Get.lazyPut as inject on our page instead Get.put,
-//     //? but we need to use GetBuilder to be able use controller
-//   } else {
-//     if (kDebugMode) {
-//       print("Not Valid");
-//     }
-//   }
-// }
 
 class SignUpControllerImp extends SignUpController {
   //? we write our code logic here, to separate logic from view
@@ -48,7 +22,7 @@ class SignUpControllerImp extends SignUpController {
   late TextEditingController email;
   late TextEditingController phone;
   late TextEditingController password;
-  
+
   //* start life cycle of TEC
   @override
   void onInit() {
@@ -69,43 +43,73 @@ class SignUpControllerImp extends SignUpController {
     super.dispose();
   }
 
-  // StatusRequest statusRequest = StatusRequest.none;
+//? ================ [signUp method] =================
 
   SignupData signupData = SignupData(Get.find());
   List data = [];
-  late StatusRequest statusRequest;
+
+  //! [HINT] due to using late => I get alot of null errors
+  //? and make me change code to recive only one paramaters rather than two
+  //* so becarful in next time == 2 days for this reason !!!!
+
+  // late StatusRequest statusRequest;
+  // StatusRequest statusRequest = StatusRequest.none;
+
+  //* we need use it on loading, it need initalize value
+  //? so we change late into may null => ?
+
+  StatusRequest? statusRequest;
 
   @override
   signUp() async {
-    // if (formstate.currentState!.validate()) {
-    //* we follow StatusRequest steps
-    statusRequest = StatusRequest.loading;
-    //! don't forget use update
-    // update();
+    if (formstate.currentState!.validate()) {
+      //* we follow StatusRequest steps
+      statusRequest = StatusRequest.loading;
 
-    //* save what back from testdata inside => response var
-    var response = await signupData.postdata(
-        username.text, password.text, email.text, phone.text);
-    print("=============================== Controller $response ");
+      //! don't forget use update => to refresh UI
+      update();
 
-    // statusRequest = handlingData(response);
-    statusRequest = StatusRequest.success;
+      //* save what back from testdata inside => response var
+      var response = await signupData.postdata(
+          username.text, password.text, email.text, phone.text);
+      print("=============================== Controller $response ");
 
-    // update();
-    //* when success
-    if (response is Map && response.containsKey('status')) {
-      if (response['status'] == "success") {
-        // data.addAll(response['data']);
-        Get.offNamed(AppRoute.verfiyCodeSignUp,
-            arguments: {"email": email.text});
-      } else {
-        Get.defaultDialog(
-            title: "ُWarning",
-            middleText: "Phone Number Or Email Already Exists");
-        statusRequest = StatusRequest.failure;
+      statusRequest = handlingData(response);
+      statusRequest = StatusRequest.success;
+
+      update();
+      //* when success
+      if (response is Map && response.containsKey('status')) {
+        if (response['status'] == "success") {
+          // data.addAll(response['data']);
+
+          //* we need to pass email into verify page, so do that as Map
+          Get.offNamed(AppRoute.verfiyCodeSignUp,
+              arguments: {"email": email.text});
+        } else {
+          Get.defaultDialog(
+              title: "ُWarning",
+              middleText: "Phone Number Or Email Already Exists");
+          statusRequest = StatusRequest.failure;
+        }
       }
+      update();
     }
-    update();
+    //* or
+    //?==============================================================
+    //    if (StatusRequest.success == statusRequest) {
+    //     if (response['status'] == "success") {
+    //       // data.addAll(response['data']);
+    //       Get.offNamed(AppRoute.verfiyCodeSignUp);
+    //     } else {
+    //       Get.defaultDialog(title: "ُWarning" , middleText: "Phone Number Or Email Already Exists") ;
+    //       statusRequest = StatusRequest.failure;
+    //     }
+    //   }
+    //   update();
+    // } else {}
+
+    //?==============================================================
   }
 
   @override
@@ -113,14 +117,6 @@ class SignUpControllerImp extends SignUpController {
     Get.offNamed(AppRoute.login);
   }
 }
-
-  
-
-  
-
-
-
-
 
 /*
 The error is caused by calling the `[]` method on an instance of the `StatusRequest` class. The `[]` method is not defined for this class and therefore cannot be called on instances of it. 
