@@ -26,4 +26,5 @@ class AppLink {
   //! ================= Auth data =================
   static const String signUp = "$server/auth/signup.php";
   static const String verifyCodeSignUp = "$server/auth/verifycode.php";
+  static const String login = "$server/auth/login.php";
 }

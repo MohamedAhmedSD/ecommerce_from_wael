@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 
+import '../../core/class/statusrequest.dart';
 import '../../core/constants/routes.dart';
+import '../../core/functions/handlingdatacontroller.dart';
+import '../../data/datasource/remote/auth/login.dart';
 
 abstract class LoginController extends GetxController {
   //* 0. form key
@@ -44,23 +46,36 @@ class LoginControllerImp extends LoginController {
   //? ================ [login method] =================
 
   //* when use login function
-  @override
-  login() {
-    //* we need check is our fields vaild according our validators our not
-    //? determines it by using formstate
+  LoginData loginData = LoginData(Get.find());
+  StatusRequest? statusRequest;
 
-    var formdata = formstate.currentState;
-    if (formdata!.validate()) {
-      if (kDebugMode) {
-        print("Valid");
+  @override
+  login() async {
+    if (formstate.currentState!.validate()) {
+      statusRequest = StatusRequest.loading;
+      update();
+      var response = await loginData.postdata(email.text, password.text);
+      print("=============================== Controller $response ");
+      statusRequest = handlingData(response);
+      if (StatusRequest.success == statusRequest) {
+        if (response['status'] == "success") {
+          // data.addAll(response['data']);
+          Get.offNamed(AppRoute.homepage);
+        } else {
+          Get.defaultDialog(
+              title: "ُWarning", middleText: "Email Or Password Not Correct");
+          statusRequest = StatusRequest.failure;
+        }
       }
+      update();
     } else {
-      if (kDebugMode) {
-        print("Not Valid");
-      }
+      Get.defaultDialog(
+        title: "ُWarning",
+        middleText: "Wrong Email or Password",
+      );
+      statusRequest = StatusRequest.failure;
     }
   }
-
   //? ================ [nav methods] =================
 
   //* 2. nav into SignUp page
