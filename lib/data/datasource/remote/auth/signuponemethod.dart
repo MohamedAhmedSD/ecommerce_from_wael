@@ -2,7 +2,8 @@
 
 import 'package:ecommerce_wah/core/class/crud_adjust.dart';
 
-import '../../linkapi.dart';
+import '../../../../linkapi.dart';
+
 
 class SignupDataOneMethod {
   CrudOne crud;

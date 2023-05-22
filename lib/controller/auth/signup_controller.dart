@@ -1,4 +1,4 @@
-import 'package:ecommerce_wah/data/auth/signup.dart';
+import 'package:ecommerce_wah/data/datasource/remote/auth/signup.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 

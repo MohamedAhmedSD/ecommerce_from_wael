@@ -1,7 +1,7 @@
 //! it is start point to deal with backend then make controller
 
-import '../../core/class/crud.dart';
-import '../../linkapi.dart';
+import '../../../../core/class/crud.dart';
+import '../../../../linkapi.dart';
 
 class SignupData {
   Crud crud;
