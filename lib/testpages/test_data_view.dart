@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../controller/test/test_data.controller.dart';
-import '../controller/test/test_datasecond_controller.dart';
 import '../core/class/handling_dataviewsecond.dart';
 import '../core/constants/color.dart';
 

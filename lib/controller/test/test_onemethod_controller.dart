@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../data/datasource/remote/test_data_onemethod.dart';
+import '../../data/datasource/remote/tests/test_data_onemethod.dart';
+
 
 class TestOneController extends GetxController {
   TestDataOneMethod testData = TestDataOneMethod(Get.find());
