@@ -54,9 +54,13 @@ class LoginControllerImp extends LoginController {
     if (formstate.currentState!.validate()) {
       statusRequest = StatusRequest.loading;
       update();
+
       var response = await loginData.postdata(email.text, password.text);
+      // var response = await loginData.postdata(password.text,email.text,);
       print("=============================== Controller $response ");
+
       statusRequest = handlingData(response);
+
       if (StatusRequest.success == statusRequest) {
         if (response['status'] == "success") {
           // data.addAll(response['data']);
@@ -68,13 +72,7 @@ class LoginControllerImp extends LoginController {
         }
       }
       update();
-    } else {
-      Get.defaultDialog(
-        title: "ُWarning",
-        middleText: "Wrong Email or Password",
-      );
-      statusRequest = StatusRequest.failure;
-    }
+    } else {}
   }
   //? ================ [nav methods] =================
 

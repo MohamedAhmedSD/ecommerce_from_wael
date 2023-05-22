@@ -6,10 +6,14 @@ import '../../../../linkapi.dart';
 class LoginData {
   Crud crud;
   LoginData(this.crud);
-  postdata(String password, String email) async {
+  //?============================================================
+  //! any orgnaization error => not match with order of backend
+  //* ================ so becarfull ==========================
+  postdata(String email, String password) async {
     var response = await crud.postData(AppLink.login, {
-      "password": password,
+      //! give me wrong email when use password first =========
       "email": email,
+      "password": password,
     });
     return response.fold((l) => l, (r) => r);
   }
