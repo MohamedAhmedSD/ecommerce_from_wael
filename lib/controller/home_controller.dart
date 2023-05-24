@@ -41,6 +41,8 @@ class HomeControllerImp extends HomeController {
     super.onInit();
   }
 
+  //* I need use status to reach to its inner data
+  //* so on backend I add status at its end
   @override
   getdata() async {
     statusRequest = StatusRequest.loading;
@@ -49,8 +51,10 @@ class HomeControllerImp extends HomeController {
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
+        //! we need add certain data we need to use it
+        //? as categories && items
         categories.addAll(response['categories']);
-        items.addAll(response['items']);
+        // items.addAll(response['items']);
       } else {
         statusRequest = StatusRequest.failure;
       }
