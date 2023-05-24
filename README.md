@@ -182,7 +182,7 @@ not deal it with localization
 
 - you can add description ...
 
-## [55] Items table [Mysql]; 
+## [53] Items table [Mysql]; 
 <!> items table contain 
     => items_id,
     items_name,
@@ -201,10 +201,14 @@ not deal it with localization
 - items_active == when item end or hidden it for certain reason, as I bussy
 - items_cat == items connect with categories == one to many relationships, should same type for 2 columns that will be connected later, => use relationship
 
+
+## [54] notifications:
+
 ## [55] retouch:
 
 ## [56] to [57] homepage UI {1-2};
 - CustomAppBar == search and notification widget
+- CustomCardHome == container contains => tests + circle shape
 
 ## [58] categories model:-
 

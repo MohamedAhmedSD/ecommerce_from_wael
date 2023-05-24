@@ -37,7 +37,10 @@ class OnBoardingControllerImpl extends OnBoardingController {
       // print("Last page => go to login page");
 
       //! connect with middleware
-      myServices.sharedPreferences.setString("onboarding", "1");
+      //* to skip next time start from it
+      //? change key from => onboarding into => step, step deal on all level app
+      // myServices.sharedPreferences.setString("onboarding", "1");
+      myServices.sharedPreferences.setString("step", "1");
       //* don't back to onboarding page
       Get.offAllNamed("/login");
     } else {

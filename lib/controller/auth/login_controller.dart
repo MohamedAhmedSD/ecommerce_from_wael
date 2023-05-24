@@ -1,3 +1,4 @@
+import 'package:ecommerce_wah/core/services/services.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
@@ -122,6 +123,9 @@ class LoginControllerImp extends LoginController {
 
   bool isshowpassword = true;
 
+  //* to call SharedPrefs
+  MyServices myServices = Get.find();
+
   StatusRequest? statusRequest;
 
   showPassword() {
@@ -142,6 +146,25 @@ class LoginControllerImp extends LoginController {
       if (StatusRequest.success == statusRequest) {
         if (response['status'] == "success") {
           // data.addAll(response['data']);
+
+          //* add data that get by getdata method on login.php to
+          //* save [id, email, phone ..] by SharedPrefs
+
+          //? respose => back 2 keys on of them == data => to access data come from php
+          //! which get DB column names
+          myServices.sharedPreferences
+              .setString("id", response['data']['users_id']);
+          myServices.sharedPreferences
+              .setString("username", response['data']['users_name']);
+          myServices.sharedPreferences
+              .setString("email", response['data']['users_email']);
+          myServices.sharedPreferences
+              .setString("phone", response['data']['users_phone']);
+          //! add also step key to be the scond place to skip if
+          //! we reach to it => first place was == onboarding
+          myServices.sharedPreferences.setString("step", "2");
+
+          //* now you can nav into homepage
           Get.offNamed(AppRoute.homepage);
         } else {
           Get.defaultDialog(
