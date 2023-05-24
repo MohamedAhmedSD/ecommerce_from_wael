@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -31,6 +30,7 @@ class ItemsHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //* Image - opacity - text
     return Stack(
       children: [
         Container(
