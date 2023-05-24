@@ -1,5 +1,3 @@
-
-
 // This code imports the necessary libraries to handle API requests.
 // Importing the linkapi package
 
@@ -18,7 +16,8 @@ class TestDataOneMethod {
 
   getData() async {
     var response = await crud.postData(AppLink.testdata, {});
-    return response ?? {}; // Return an empty `Map` if `response` is null
+    // return response ?? {}; // Return an empty `Map` if `response` is null
+    return response; // Return an empty `Map` if `response` is null
   }
 }
 
