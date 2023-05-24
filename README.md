@@ -204,7 +204,7 @@ not deal it with localization
 ## [55] retouch:
 
 ## [56] to [57] homepage UI {1-2};
-
+- CustomAppBar == search and notification widget
 
 ## [58] categories model:-
 

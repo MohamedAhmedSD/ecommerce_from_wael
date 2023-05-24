@@ -13,6 +13,7 @@ class CustomCardHome extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 15),
       child: Stack(children: [
+        //* test part
         Container(
           alignment: Alignment.center,
           height: 150,
@@ -26,7 +27,10 @@ class CustomCardHome extends StatelessWidget {
                 style: const TextStyle(color: Colors.white, fontSize: 30)),
           ),
         ),
+        //* circular shape part
         Positioned(
+          //? using [-] to pull it to opposite direction
+          //? to make a cericular shape => W == H == borderradius.circular()
           top: -20,
           right: -20,
           child: Container(
