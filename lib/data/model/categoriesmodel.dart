@@ -17,7 +17,8 @@ class CategoriesModel {
       this.categoriesDatetime});
 
   CategoriesModel.fromJson(Map<String, dynamic> json) {
-    categoriesId = json['categories_id'];
+    // categoriesId = json['categories_id'];
+    categoriesId = json['categories_id'].toString();
     categoriesName = json['categories_name'];
     categoriesNamaAr = json['categories_nama_ar'];
     categoriesImage = json['categories_image'];

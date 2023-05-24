@@ -31,8 +31,7 @@ class AppLink {
   static const String verifyCodeSignUp = "$server/auth/verifycode.php";
   static const String login = "$server/auth/login.php";
 
-  static const String imageststatic =
-      "https://waelabohamza.com/ecommerce/upload";
+  static const String imageststatic = "$server/upload";
 //========================== Image ============================
   static const String imagestCategories = "$imageststatic/categories";
   static const String imagestItems = "$imageststatic/items";

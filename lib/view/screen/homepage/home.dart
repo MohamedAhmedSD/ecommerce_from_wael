@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
       //! we will get some data from backend
       body: GetBuilder<HomeControllerImp>(
           builder: (controller) => HandlingDataView(
-              statusRequest: controller.statusRequest,
+              statusRequest: controller.statusRequest!,
               widget: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: ListView(

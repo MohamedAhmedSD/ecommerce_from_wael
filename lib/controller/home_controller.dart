@@ -15,7 +15,8 @@ class HomeControllerImp extends HomeController {
   MyServices myServices = Get.find();
 
   String? username;
-  String? id;
+  // String? id;
+  int? id;
 
   HomeData homedata = HomeData(Get.find());
 
@@ -25,13 +26,15 @@ class HomeControllerImp extends HomeController {
   // List items = [];
 
   //!!!!!!!!!!!!!!!!!!
-  late StatusRequest statusRequest;
-
+  // late StatusRequest statusRequest;
+  // StatusRequest? statusRequest;
+  StatusRequest? statusRequest = StatusRequest.none;
   @override
   initialData() {
     //* get them from SP => by its key
     username = myServices.sharedPreferences.getString("username");
-    id = myServices.sharedPreferences.getString("id");
+    // id = myServices.sharedPreferences.getString("id");
+    id = myServices.sharedPreferences.getInt("id");
   }
 
   @override
@@ -49,6 +52,8 @@ class HomeControllerImp extends HomeController {
     var response = await homedata.getData();
     print("=============================== Controller $response ");
     statusRequest = handlingData(response);
+    statusRequest = StatusRequest.success;
+    update();
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
         //! we need add certain data we need to use it
