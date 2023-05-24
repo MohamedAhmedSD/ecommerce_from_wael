@@ -11,6 +11,7 @@ abstract class HomeController extends GetxController {
 }
 
 class HomeControllerImp extends HomeController {
+  //! to use SharedPrefs
   MyServices myServices = Get.find();
 
   String? username;
@@ -28,6 +29,7 @@ class HomeControllerImp extends HomeController {
 
   @override
   initialData() {
+    //* get them from SP => by its key
     username = myServices.sharedPreferences.getString("username");
     id = myServices.sharedPreferences.getString("id");
   }

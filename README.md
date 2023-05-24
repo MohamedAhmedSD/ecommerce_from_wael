@@ -205,6 +205,8 @@ not deal it with localization
 ## [54] notifications:
 
 ## [55] retouch:
+- use sharedprefs to set login data and get it on home page
+- change middleware into step and learn more about that
 
 ## [56] to [57] homepage UI {1-2};
 - CustomAppBar == search and notification widget

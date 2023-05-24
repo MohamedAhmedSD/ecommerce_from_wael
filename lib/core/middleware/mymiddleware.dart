@@ -20,7 +20,14 @@ class MyMiddleWare extends GetMiddleware {
   //* in RouteSettings, through getString
   @override
   RouteSettings? redirect(String? route) {
-    if (myServices.sharedPreferences.getString("onboarding") == "1") {
+    //! use only multi if statement no use to else if
+    //? high number first and have more priorty
+    if (myServices.sharedPreferences.getString("step") == "2") {
+      //* nav to Login
+      return const RouteSettings(name: AppRoute.homepage);
+    }
+    //  onboarding into => step,
+    if (myServices.sharedPreferences.getString("step") == "1") {
       //* nav to Login
       return const RouteSettings(name: AppRoute.login);
     }

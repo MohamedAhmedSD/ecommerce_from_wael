@@ -42,6 +42,8 @@ class OnBoardingControllerImpl extends OnBoardingController {
       // myServices.sharedPreferences.setString("onboarding", "1");
       myServices.sharedPreferences.setString("step", "1");
       //* don't back to onboarding page
+
+      //! go to edit middleware =>  onboarding into => step,
       Get.offAllNamed("/login");
     } else {
       pageController.animateToPage(currentPage,

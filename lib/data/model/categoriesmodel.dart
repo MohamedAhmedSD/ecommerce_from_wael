@@ -1,3 +1,7 @@
+//* after add some data on our database, test our api and take only data list
+//* to paste it into https://javiercbk.github.io/json_to_dart/
+//* to make our model without errors
+
 class CategoriesModel {
   String? categoriesId;
   String? categoriesName;
