@@ -14,6 +14,8 @@ class ListCategoriesHome extends GetView<HomeControllerImp> {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 100,
+      //* we use separated to separate between our containers rather than builder
+
       child: ListView.separated(
         separatorBuilder: (context, index) => const SizedBox(width: 10),
         itemCount: controller.categories.length,
@@ -42,8 +44,11 @@ class Categories extends StatelessWidget {
               color: AppColor.thirdColor,
               borderRadius: BorderRadius.circular(20)),
           padding: const EdgeInsets.symmetric(horizontal: 10),
+          //* always becarful if container was a child its take height of parent
+          //* not that given by you
           height: 70,
           width: 70,
+          //* we use Svg to change color easlly
           child: SvgPicture.network(
               "${AppLink.imagestCategories}/${categoriesModel.categoriesImage}",
               color: AppColor.secondColor),

@@ -14,8 +14,10 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //* DI
     Get.put(HomeControllerImp());
     return Scaffold(
+      //! we will get some data from backend
       body: GetBuilder<HomeControllerImp>(
           builder: (controller) => HandlingDataView(
               statusRequest: controller.statusRequest,
