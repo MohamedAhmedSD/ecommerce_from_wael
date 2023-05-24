@@ -61,8 +61,6 @@ List<GetPage<dynamic>>? routes = [
   GetPage(
       name: AppRoute.verfiyCodeSignUp, page: () => const VerfiyCodeSignUp()),
 
-        //! ==================== [auth] ====================
-  GetPage(
-      name: AppRoute.homepage, page: () => const HomePage()),
-
+  //! ==================== [auth] ====================
+  GetPage(name: AppRoute.homepage, page: () => const HomePage()),
 ];

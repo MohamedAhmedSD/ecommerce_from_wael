@@ -36,11 +36,11 @@ validInput(String val, int min, int max, String type) {
   }
 
   //* =========== I add password == use username regex ===========
-  if (type == "password") {
-    if (!GetUtils.isUsername(val)) {
-      return "not valid password";
-    }
-  }
+  // if (type == "password") {
+  //   if (!GetUtils.isUsername(val)) {
+  //     return "not valid password";
+  //   }
+  // }
 
   //? ================= [2] is it empty or not ===========================
   if (val.isEmpty) {

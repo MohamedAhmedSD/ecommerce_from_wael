@@ -2,7 +2,7 @@ class AppLink {
   //! ================= server link =================
   //*?1. hosting name
   //* a. name
-  static const String server = "https://ecommerce-php-wah.herokuapp.com/";
+  static const String server = "http://sheikhbtoo.atwebpages.com";
 //* b. digits
   static const String serverDigits = "http://185.27.134.10/ecommerce_project/";
 
@@ -21,10 +21,38 @@ class AppLink {
       "http://127.0.0.1/ecommerce/wah/ecommerce_project/";
 
   //! ================= test data =================
-  static const String testdata = "$server/test/test_getalldata.php";
+  // static const String testdata = "$server/test/test_getalldata.php";
+  static const String testdata = "$server/read.php";
 
   //! ================= Auth data =================
   static const String signUp = "$server/auth/signup.php";
+  // static const String signUp = "$server/test_phpmailer.php";
+
   static const String verifyCodeSignUp = "$server/auth/verifycode.php";
   static const String login = "$server/auth/login.php";
+
+  static const String imageststatic =
+      "https://waelabohamza.com/ecommerce/upload";
+//========================== Image ============================
+  static const String imagestCategories = "$imageststatic/categories";
+  static const String imagestItems = "$imageststatic/items";
+// =============================================================
+//
+  static const String test = "$server/test.php";
+
+// ================================= Auth ========================== //
+
+  static const String verifycodessignup = "$server/auth/verfiycode.php";
+
+// ================================= ForgetPassword ========================== //
+
+  static const String checkEmail = "$server/forgetpassword/checkemail.php";
+  static const String resetPassword =
+      "$server/forgetpassword/resetpassword.php";
+  static const String verifycodeforgetpassword =
+      "$server/forgetpassword/verifycode.php";
+
+// Home
+
+  static const String homepage = "$server/home.php";
 }

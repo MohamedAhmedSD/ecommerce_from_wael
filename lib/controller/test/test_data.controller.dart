@@ -82,7 +82,8 @@ class TestController extends GetxController {
   List data = [];
 
   // 4- Declare a statusRequest variable to handle the status of API request
-  late StatusRequest statusRequest;
+  // late StatusRequest statusRequest;
+  StatusRequest? statusRequest;
 
   // 5- Create a getData function to request data from API
   getData() async {

@@ -158,3 +158,57 @@ then call them on main file
 
 ## we still have problems with hosting server, try use local server instead
 I use heroku, and learn how to use it
+
+
+## https://netcorecloud.com/tutorials/phpmailer-smtp-error-could-not-connect-to-smtp-host/
+
+
+##[HINT]: after days from try alot hosts and deal with its problems, we pass backend problems!!
+
+## [46] to [51]:
+## [52] categiries table [Mysql]; 
+- if I want make multi ecommerce => make services table first contain main service as hospital,
+schools, market ...
+- then every one contain its child == parent - child relations
+- we deal with multi-languages app, so make repeate column for every language,
+not deal it with localization
+
+<!> categories table contain 
+    => categories_id, 
+    categories_name, 
+    categories_name_ar,
+    categories_image, 
+    categories_datetime
+
+- you can add description ...
+
+## [55] Items table [Mysql]; 
+<!> items table contain 
+    => items_id,
+    items_name,
+    items_name_ar,
+    items_desc,
+    items_desc_ar,
+    items_image,
+    items_count,
+    items_active,
+    items_price,
+    items_discount,
+    items_date,
+    items_cat
+
+- items count == quantity
+- items_active == when item end or hidden it for certain reason, as I bussy
+- items_cat == items connect with categories == one to many relationships, should same type for 2 columns that will be connected later, => use relationship
+
+## [55] retouch:
+
+## [56] to [57] homepage UI {1-2};
+
+
+## [58] categories model:-
+
+
+## [59] home controller:
+
+## [60] to [61] homepage:-
