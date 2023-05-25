@@ -36,12 +36,23 @@ class ItemsHome extends StatelessWidget {
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           margin: const EdgeInsets.symmetric(horizontal: 10),
+
+          //! I try png,jpg but hosting not worknwill so I use svg picture
           child: Image.network(
             "${AppLink.imagestItems}/${itemsModel.itemsImage}",
+            // "${AppLink.imagestItems}/${controller.items[0]['items_image']}",
             height: 100,
             width: 150,
             fit: BoxFit.fill,
           ),
+          //
+          // child: SvgPicture.network(
+          //   "${AppLink.imagestItems}/${itemsModel.itemsImage}",
+          //   height: 100,
+          //   width: 150,
+          //   fit: BoxFit.fill,
+          // )
+          // color: AppColor.secondColor),
         ),
         Container(
           decoration: BoxDecoration(

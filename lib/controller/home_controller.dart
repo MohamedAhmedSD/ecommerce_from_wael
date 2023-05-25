@@ -59,7 +59,7 @@ class HomeControllerImp extends HomeController {
         //! we need add certain data we need to use it
         //? as categories && items
         categories.addAll(response['categories']);
-        // items.addAll(response['items']);
+        items.addAll(response['items']);
       } else {
         statusRequest = StatusRequest.failure;
       }
