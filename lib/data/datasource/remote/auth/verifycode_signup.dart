@@ -12,7 +12,7 @@ class VerifyCodeSignUpData {
     var response = await crud.postData(AppLink.verifyCodeSignUp, {
       //* green from or [php]
       "email": email,
-      "verifycode": verifycode,
+      "verifycode": verifycode
     });
     return response.fold((l) => l, (r) => r);
   }

@@ -2,10 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 
+import '../../../../core/constants/routes.dart';
+
 //? bito extension =>
 // bito => workplace => https://alpha.bito.co/auth/login?red=ws&TgVDJu0YJT4YlTqJA6izLGwGbc7OispF5_nazrADdeQ=
 
-import '../../../core/constants/routes.dart';
 
 //? The ForgetPasswordControllerImp class is a concrete implementation of
 //* the abstract ForgetPasswordController class that contains methods for

@@ -1,3 +1,4 @@
+import 'package:ecommerce_wah/core/constants/routes.dart';
 import 'package:ecommerce_wah/core/services/services.dart';
 import 'package:ecommerce_wah/data/datasource/static.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +45,8 @@ class OnBoardingControllerImpl extends OnBoardingController {
       //* don't back to onboarding page
 
       //! go to edit middleware =>  onboarding into => step,
-      Get.offAllNamed("/login");
+      // Get.offAllNamed("/login");
+      Get.offAllNamed(AppRoute.login);
     } else {
       pageController.animateToPage(currentPage,
           duration: const Duration(milliseconds: 900), curve: Curves.ease);

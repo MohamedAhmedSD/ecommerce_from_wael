@@ -34,6 +34,7 @@ class HomePage extends StatelessWidget {
                           onPressedSearch: () {}),
                       const CustomCardHome(
                           title: "A summer surprise", body: "Cashback 20%"),
+                      const CustomTitleHome(title: "Categories"),
                       const ListCategoriesHome(),
                       const SizedBox(height: 10),
                       const CustomTitleHome(title: "Product for you"),

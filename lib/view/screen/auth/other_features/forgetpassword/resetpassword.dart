@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../../controller/auth/other_features/resetpassword_controller.dart';
+import '../../../../../controller/auth/other_features/forgetpassword/resetpassword_controller.dart';
 import '../../../../../core/constants/color.dart';
 import '../../../../../core/functions/validinput.dart';
 import '../../../../widgets/auth/custombuttonauth.dart';

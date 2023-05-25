@@ -1,4 +1,4 @@
-import 'package:ecommerce_wah/view/screen/homepage/home.dart';
+import 'package:ecommerce_wah/view/screen/homepage/homescreen.dart';
 import 'package:get/get.dart';
 
 import '../core/constants/routes.dart';
@@ -61,6 +61,7 @@ List<GetPage<dynamic>>? routes = [
   GetPage(
       name: AppRoute.verfiyCodeSignUp, page: () => const VerfiyCodeSignUp()),
 
-  //! ==================== [auth] ====================
-  GetPage(name: AppRoute.homepage, page: () => const HomePage()),
+  //! ==================== [hpmepage] ====================
+  // GetPage(name: AppRoute.homepage, page: () => const HomePage()),
+  GetPage(name: AppRoute.homepage, page: () => const HomeScreen()),
 ];

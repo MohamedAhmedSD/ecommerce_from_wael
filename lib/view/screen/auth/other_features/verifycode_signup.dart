@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 
-import '../../../../controller/auth/other_features/verfiycodesignup_controller.dart';
+import '../../../../controller/auth/other_features/forgetpassword/verfiycodesignup_controller.dart';
 import '../../../../core/constants/color.dart';
 import '../../../widgets/auth/customtextbodyauth.dart';
 import '../../../widgets/auth/customtexttitleauth.dart';

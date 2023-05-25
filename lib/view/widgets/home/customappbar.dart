@@ -39,7 +39,9 @@ class CustomAppBar extends StatelessWidget {
         //? 2. notification icon ==================================================
         Container(
           decoration: BoxDecoration(
-              color: Colors.grey[200], borderRadius: BorderRadius.circular(10)),
+            color: Colors.grey[200],
+            borderRadius: BorderRadius.circular(10),
+          ),
           width: 60,
           padding: const EdgeInsets.symmetric(vertical: 8),
           child: IconButton(

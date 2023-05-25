@@ -5,9 +5,13 @@ import 'package:get/get.dart';
 class InitialBindings extends Bindings {
   @override
   void dependencies() {
+    //* Tests:-
     //! don't forget fenix
     // Get.lazyPut(() => SignUpControllerImp(), fenix: true);
-    Get.put(Crud());
     Get.put(CrudOne());
+
+    //* ou
+        Get.put(Crud());
+
   }
 }

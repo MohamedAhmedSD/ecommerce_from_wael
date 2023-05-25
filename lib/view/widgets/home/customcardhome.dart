@@ -24,7 +24,7 @@ class CustomCardHome extends StatelessWidget {
             title: Text(title,
                 style: const TextStyle(color: Colors.white, fontSize: 20)),
             subtitle: Text(body,
-                style: const TextStyle(color: Colors.white, fontSize: 30)),
+                style: const TextStyle(color: Colors.white, fontSize: 28)),
           ),
         ),
         //* circular shape part
@@ -40,7 +40,7 @@ class CustomCardHome extends StatelessWidget {
                 color: AppColor.secondColor,
                 borderRadius: BorderRadius.circular(160)),
           ),
-        )
+        ),
       ]),
     );
   }

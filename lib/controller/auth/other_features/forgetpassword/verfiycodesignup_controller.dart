@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
 
-import '../../../core/class/statusrequest.dart';
-import '../../../core/constants/routes.dart';
-import '../../../core/functions/handlingdatacontroller.dart';
-import '../../../data/datasource/remote/auth/verifycode_signup.dart';
+import '../../../../core/class/statusrequest.dart';
+import '../../../../core/constants/routes.dart';
+import '../../../../core/functions/handlingdatacontroller.dart';
+import '../../../../data/datasource/remote/auth/verifycode_signup.dart';
 
 abstract class VerifyCodeSignUpController extends GetxController {
   //* 1. checkCode process

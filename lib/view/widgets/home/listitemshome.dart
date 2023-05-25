@@ -45,13 +45,22 @@ class ItemsHome extends StatelessWidget {
             width: 150,
             fit: BoxFit.fill,
           ),
+
+          // child: Image.asset(
+          //   // "${AppLink.imagestItems}/${itemsModel.itemsImage}",
+          //   "assets/images/laptop.png",
+          //   // "${AppLink.imagestItems}/${controller.items[0]['items_image']}",
+          //   height: 100,
+          //   width: 150,
+          //   fit: BoxFit.fill,
+          // ),
           //
           // child: SvgPicture.network(
           //   "${AppLink.imagestItems}/${itemsModel.itemsImage}",
           //   height: 100,
           //   width: 150,
           //   fit: BoxFit.fill,
-          // )
+          // ),
           // color: AppColor.secondColor),
         ),
         Container(
@@ -62,14 +71,15 @@ class ItemsHome extends StatelessWidget {
           width: 200,
         ),
         Positioned(
-            left: 10,
-            child: Text(
-              "${itemsModel.itemsName}",
-              style: const TextStyle(
-                  color: Colors.white,
-                  // fontWeight: FontWeight.bold,
-                  fontSize: 14),
-            ))
+          left: 10,
+          child: Text(
+            "${itemsModel.itemsName}",
+            style: const TextStyle(
+                color: Colors.white,
+                // fontWeight: FontWeight.bold,
+                fontSize: 14),
+          ),
+        ),
       ],
     );
   }

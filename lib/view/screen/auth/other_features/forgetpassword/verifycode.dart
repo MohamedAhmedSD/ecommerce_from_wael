@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 
-import '../../../../../controller/auth/other_features/verifycode_controller.dart';
+import '../../../../../controller/auth/other_features/forgetpassword/verifycode_controller.dart';
 import '../../../../../core/constants/color.dart';
 import '../../../../widgets/auth/customtextbodyauth.dart';
 import '../../../../widgets/auth/customtexttitleauth.dart';
@@ -31,10 +31,9 @@ class VerfiyCode extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
         child: ListView(children: [
           const SizedBox(height: 20),
-           CustomTextTitleAuth(text: "52".tr),
+          CustomTextTitleAuth(text: "52".tr),
           const SizedBox(height: 10),
-           CustomTextBodyAuth(
-              text: "53".tr),
+          CustomTextBodyAuth(text: "53".tr),
           const SizedBox(height: 15),
           //! otp ::::::::::::
           OtpTextField(
