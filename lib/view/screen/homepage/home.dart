@@ -16,8 +16,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     //* DI
     Get.put(HomeControllerImp());
+    // HomeControllerImp controller = Get.put(HomeControllerImp());
     return Scaffold(
-      //! we will get some data from backend
+      // body: Container(child: Center(child: Text('${controller.id}'))),
+
+      // //! we will get some data from backend
       body: GetBuilder<HomeControllerImp>(
           builder: (controller) => HandlingDataView(
               statusRequest: controller.statusRequest!,
