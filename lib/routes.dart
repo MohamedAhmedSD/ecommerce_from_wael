@@ -5,7 +5,6 @@ import '../core/constants/routes.dart';
 import '../view/screen/auth/login.dart';
 import '../view/screen/onboarding/onboarding.dart';
 
-import 'core/middleware/mymiddleware.dart';
 import 'view/screen/auth/other_features/forgetpassword/forgetpassword.dart';
 import 'view/screen/auth/other_features/forgetpassword/resetpassword.dart';
 import 'view/screen/auth/other_features/forgetpassword/success_resetpassword.dart';
@@ -13,7 +12,7 @@ import 'view/screen/auth/other_features/forgetpassword/verifycode.dart';
 import 'view/screen/auth/other_features/success_signup.dart';
 import 'view/screen/auth/other_features/verifycode_signup.dart';
 import 'view/screen/auth/signup.dart';
-import 'view/screen/language/language.dart';
+import 'view/screen/items.dart';
 
 //* flutter ordinary routes
 // Map<String, Widget Function(BuildContext)> routes = {
@@ -35,8 +34,8 @@ import 'view/screen/language/language.dart';
 
 List<GetPage<dynamic>>? routes = [
   //! ==================== [language] ====================
-  GetPage(
-      name: "/", page: () => const Language(), middlewares: [MyMiddleWare()]),
+  // GetPage(
+  //     name: "/", page: () => const Language(), middlewares: [MyMiddleWare()]),
   //! ==================== [test pages] ====================
   //* test page to test our internet connection
   // GetPage(name: "/", page: () => const Test()),
@@ -64,4 +63,6 @@ List<GetPage<dynamic>>? routes = [
   //! ==================== [hpmepage] ====================
   // GetPage(name: AppRoute.homepage, page: () => const HomePage()),
   GetPage(name: AppRoute.homepage, page: () => const HomeScreen()),
+  // GetPage(name: AppRoute.items, page: () => const Items()),
+  GetPage(name: '/', page: () => const Items()),
 ];

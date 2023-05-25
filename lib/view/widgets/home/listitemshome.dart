@@ -38,22 +38,22 @@ class ItemsHome extends StatelessWidget {
           margin: const EdgeInsets.symmetric(horizontal: 10),
 
           //! I try png,jpg but hosting not worknwill so I use svg picture
-          child: Image.network(
-            "${AppLink.imagestItems}/${itemsModel.itemsImage}",
-            // "${AppLink.imagestItems}/${controller.items[0]['items_image']}",
-            height: 100,
-            width: 150,
-            fit: BoxFit.fill,
-          ),
-
-          // child: Image.asset(
-          //   // "${AppLink.imagestItems}/${itemsModel.itemsImage}",
-          //   "assets/images/laptop.png",
+          // child: Image.network(
+          //   "${AppLink.imagestItems}/${itemsModel.itemsImage}",
           //   // "${AppLink.imagestItems}/${controller.items[0]['items_image']}",
           //   height: 100,
           //   width: 150,
           //   fit: BoxFit.fill,
           // ),
+
+          child: Image.asset(
+            // "${AppLink.imagestItems}/${itemsModel.itemsImage}",
+            "assets/images/laptop.png",
+            // "${AppLink.imagestItems}/${controller.items[0]['items_image']}",
+            height: 100,
+            width: 150,
+            fit: BoxFit.fill,
+          ),
           //
           // child: SvgPicture.network(
           //   "${AppLink.imagestItems}/${itemsModel.itemsImage}",

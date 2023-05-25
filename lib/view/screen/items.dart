@@ -21,7 +21,7 @@ class Items extends StatelessWidget {
         padding: const EdgeInsets.all(15),
         child: GetBuilder<ItemsControllerImp>(
             builder: (controller) => HandlingDataView(
-                statusRequest: controller.statusRequest,
+                statusRequest: controller.statusRequest!,
                 widget: ListView(children: [
                   CustomAppBar(
                       titleappbar: "Find Product",

@@ -1,4 +1,3 @@
-
 import 'package:get/get.dart';
 
 import '../core/class/statusrequest.dart';
@@ -20,7 +19,8 @@ class ItemsControllerImp extends ItemsController {
 
   List data = [];
 
-  late StatusRequest statusRequest;
+  // late StatusRequest statusRequest;
+  StatusRequest? statusRequest = StatusRequest.none;
 
   @override
   void onInit() {
@@ -51,6 +51,8 @@ class ItemsControllerImp extends ItemsController {
     var response = await testData.getData(categoryid);
     print("=============================== Controller $response ");
     statusRequest = handlingData(response);
+    statusRequest = StatusRequest.success;
+
     if (StatusRequest.success == statusRequest) {
       // Start backend
       if (response['status'] == "success") {
