@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../controller/homescreen_controller.dart';
+import '../../../core/constants/color.dart';
 import '../../widgets/home/bnb/custombottomappbarhome.dart';
 
 //? try don't use packages if you can build what you want by yourself
@@ -18,6 +19,7 @@ class HomeScreen extends StatelessWidget {
               // backgroundColor: Colors.red,
               //* how we use it inside bottomNavbar
               floatingActionButton: FloatingActionButton(
+                  backgroundColor: AppColor.primaryColor,
                   onPressed: () {},
                   child: const Icon(Icons.shopping_basket_outlined)),
               //? by determain its location
