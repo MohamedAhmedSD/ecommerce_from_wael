@@ -30,10 +30,9 @@ class HomeScreenControllerImp extends HomeScreenController {
     )
   ];
 
-  //* titles
+  //* titles, on seprate list but on same orders of screen
   List titlebottomappbar = ["home", "settings", "profile", "favorite"];
 
-  
   @override
   changePage(int i) {
     currentpage = i;
