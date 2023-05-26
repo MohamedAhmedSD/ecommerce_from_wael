@@ -12,7 +12,7 @@ import 'view/screen/auth/other_features/forgetpassword/verifycode.dart';
 import 'view/screen/auth/other_features/success_signup.dart';
 import 'view/screen/auth/other_features/verifycode_signup.dart';
 import 'view/screen/auth/signup.dart';
-import 'view/screen/items.dart';
+import 'view/screen/homepage/home.dart';
 
 //* flutter ordinary routes
 // Map<String, Widget Function(BuildContext)> routes = {
@@ -61,8 +61,8 @@ List<GetPage<dynamic>>? routes = [
       name: AppRoute.verfiyCodeSignUp, page: () => const VerfiyCodeSignUp()),
 
   //! ==================== [hpmepage] ====================
-  // GetPage(name: AppRoute.homepage, page: () => const HomePage()),
+  GetPage(name: AppRoute.homepage, page: () => const HomePage()),
   GetPage(name: AppRoute.homepage, page: () => const HomeScreen()),
   // GetPage(name: AppRoute.items, page: () => const Items()),
-  GetPage(name: '/', page: () => const Items()),
+  // GetPage(name: '/', page: () => const Items()),
 ];

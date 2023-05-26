@@ -17,34 +17,45 @@ class HomePage extends StatelessWidget {
     //* DI
     Get.put(HomeControllerImp());
     // HomeControllerImp controller = Get.put(HomeControllerImp());
-    return Scaffold(
-      // body: Container(child: Center(child: Text('${controller.id}'))),
 
-      // //! we will get some data from backend
-      body: GetBuilder<HomeControllerImp>(
-          builder: (controller) => HandlingDataView(
-              statusRequest: controller.statusRequest!,
-              widget: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
-                  child: ListView(
-                    children: [
-                      CustomAppBar(
-                          titleappbar: "Find Product",
-                          onPressedIcon: () {},
-                          onPressedSearch: () {}),
-                      const CustomCardHome(
-                          title: "A summer surprise", body: "Cashback 20%"),
-                      const CustomTitleHome(title: "Categories"),
-                      const ListCategoriesHome(),
-                      const SizedBox(height: 10),
-                      const CustomTitleHome(title: "Product for you"),
-                      const SizedBox(height: 10),
-                      const ListItemsHome(),
-                      const CustomTitleHome(title: "Offer"),
-                      const SizedBox(height: 10),
-                      const ListItemsHome()
-                    ],
-                  )))),
+    //! it will be apart from homescreen
+    //* sodelete homepage scaffold
+
+    return
+        // Scaffold(
+        // body: Container(child: Center(child: Text('${controller.id}'))),
+
+        // //! we will get some data from backend
+        // body:
+        GetBuilder<HomeControllerImp>(
+      builder: (controller) => HandlingDataView(
+        statusRequest: controller.statusRequest!,
+        widget: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: ListView(
+            children: [
+              CustomAppBar(
+                  titleappbar: "Find Product",
+                  onPressedIcon: () {},
+                  onPressedSearch: () {}),
+              const CustomCardHome(
+                  title: "A summer surprise", body: "Cashback 20%"),
+
+              //? remove Sizedbox and use margin inside our CustomTitleHome
+              const CustomTitleHome(title: "Categories"),
+              const ListCategoriesHome(),
+              // const SizedBox(height: 10),
+              const CustomTitleHome(title: "Product for you"),
+              // const SizedBox(height: 10),
+              const ListItemsHome(),
+              const CustomTitleHome(title: "Offer"),
+              // const SizedBox(height: 10),
+              const ListItemsHome()
+            ],
+          ),
+        ),
+      ),
+      // ),
     );
   }
 }

@@ -40,8 +40,8 @@ class Items extends StatelessWidget {
                         return CustomListItems(
                             itemsModel:
                                 ItemsModel.fromJson(controller.data[index]));
-                      })
-                ]))),
+                      }),
+                ]),),),
       ),
     );
   }
