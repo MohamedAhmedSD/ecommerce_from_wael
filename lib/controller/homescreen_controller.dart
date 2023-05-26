@@ -8,10 +8,14 @@ abstract class HomeScreenController extends GetxController {
 }
 
 class HomeScreenControllerImp extends HomeScreenController {
+  //* to control on how page change when nav
+
   int currentpage = 0;
 
+  //* list of our screens
   List<Widget> listPage = [
     const HomePage(),
+    //? as test screen == not build yet
     Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: const [Center(child: Text("Settings"))],
@@ -26,8 +30,10 @@ class HomeScreenControllerImp extends HomeScreenController {
     )
   ];
 
+  //* titles
   List titlebottomappbar = ["home", "settings", "profile", "favorite"];
 
+  
   @override
   changePage(int i) {
     currentpage = i;

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../controller/homescreen_controller.dart';
-import '../../widgets/home/custombottomappbarhome.dart';
+import '../../widgets/home/bnb/custombottomappbarhome.dart';
 
 //? try don't use packages if you can build what you want by yourself
 //* to avoid errors with updates
@@ -26,6 +26,10 @@ class HomeScreen extends StatelessWidget {
                   FloatingActionButtonLocation.centerDocked,
 
               bottomNavigationBar: const CustomBottomAppBarHome(),
+
+              //* how we nav between screens
+              //? access our screens list, use elementAt to reach to its place
+              //* then call certain metod that change or screen index
               body: controller.listPage.elementAt(controller.currentpage),
             ));
   }

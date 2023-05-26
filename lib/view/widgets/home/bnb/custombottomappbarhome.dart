@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../controller/homescreen_controller.dart';
+import '../../../../controller/homescreen_controller.dart';
 
 class CustomBottomAppBarHome extends StatelessWidget {
   const CustomBottomAppBarHome({Key? key}) : super(key: key);
@@ -41,8 +41,15 @@ class CustomBottomAppBarHome extends StatelessWidget {
           children: [
             Row(
               children: [
+                //! better programer who can shorts its code
+                //* MaterialButton => repeated
+                //? we need change icon,text,current page
+
                 MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    //* when press on it go into certain page
+                    controller.changePage(0);
+                  },
                   child: Column(
                     //! must use its min size to avoid error
                     mainAxisSize: MainAxisSize.min,
@@ -50,28 +57,34 @@ class CustomBottomAppBarHome extends StatelessWidget {
                   ),
                 ),
                 MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    controller.changePage(1);
+                  },
                   child: Column(
                     //! must use its min size to avoid error
                     mainAxisSize: MainAxisSize.min,
-                    children: const [Icon(Icons.home), Text('Home')],
+                    children: const [Icon(Icons.home), Text('Settings')],
                   ),
                 ),
                 const Spacer(),
                 MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    controller.changePage(2);
+                  },
                   child: Column(
                     //! must use its min size to avoid error
                     mainAxisSize: MainAxisSize.min,
-                    children: const [Icon(Icons.home), Text('Home')],
+                    children: const [Icon(Icons.home), Text('Profiles')],
                   ),
                 ),
                 MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    controller.changePage(3);
+                  },
                   child: Column(
                     //! must use its min size to avoid error
                     mainAxisSize: MainAxisSize.min,
-                    children: const [Icon(Icons.home), Text('Home')],
+                    children: const [Icon(Icons.home), Text('Favourite')],
                   ),
                 ),
               ],

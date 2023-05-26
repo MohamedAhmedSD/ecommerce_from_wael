@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/constants/color.dart';
+import '../../../../core/constants/color.dart';
 
+//* for BNB
 class CustomButtonAppBar extends StatelessWidget {
   final void Function()? onPressed;
   final String textbutton;
@@ -20,6 +21,7 @@ class CustomButtonAppBar extends StatelessWidget {
     return MaterialButton(
       onPressed: onPressed,
       child: Column(mainAxisSize: MainAxisSize.min, children: [
+        //* change color for both icon & texts
         Icon(icondata,
             color: active == true ? AppColor.primaryColor : Colors.black),
         Text(
